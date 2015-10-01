@@ -15,7 +15,7 @@ namespace Main
     public partial class MainGameUI : Form
     {
         Pet pet = new Pet();
-      //  Image feed2 = ;
+        bool sleepFlag = false;
 
         public MainGameUI()
         {
@@ -74,7 +74,33 @@ namespace Main
 
         private void sleepButton_Click(object sender, EventArgs e)
         {
-            //TODO - lights off animation, pet tiredness bar should start going up slowly.
+            //TODO - pet tiredness bar should start going up slowly.
+
+            sleepFlag = !sleepFlag;
+            if (sleepFlag)
+            {
+                petPicture.Image = Properties.Resources.hamstersleep;
+                petPicture.Refresh();
+                heartPicture.Image = Properties.Resources.sleep;
+                heartPicture.Refresh();
+
+                feedButton.Enabled = false;
+                cleanButton.Enabled = false;
+                playButton.Enabled = false;
+                sleepButton.Text = "Lights On";
+            }
+            else
+            {
+                petPicture.Image = Properties.Resources.hamsterfeed2;
+                petPicture.Refresh();
+                heartPicture.Image = null;
+                heartPicture.Refresh();
+
+                feedButton.Enabled = true;
+                cleanButton.Enabled = true;
+                playButton.Enabled = true;
+                sleepButton.Text = "Lights Off";
+            }
         }
 
         private void cleanButton_Click(object sender, EventArgs e)

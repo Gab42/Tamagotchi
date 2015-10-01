@@ -94,7 +94,7 @@
             this.sleepButton.Name = "sleepButton";
             this.sleepButton.Size = new System.Drawing.Size(145, 45);
             this.sleepButton.TabIndex = 6;
-            this.sleepButton.Text = "Lights off";
+            this.sleepButton.Text = "Lights Off";
             this.sleepButton.UseVisualStyleBackColor = true;
             this.sleepButton.Click += new System.EventHandler(this.sleepButton_Click);
             // 
