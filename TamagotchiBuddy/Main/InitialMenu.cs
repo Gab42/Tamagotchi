@@ -34,6 +34,9 @@ namespace Main
             mainGameUI.Size = this.Size;
             this.Hide();
             mainGameUI.Show();
+
+            
+
             
 
         }

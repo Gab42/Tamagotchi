@@ -12,9 +12,14 @@ namespace Main
 {
     public partial class MainGameUI : Form
     {
+        Pet pet = new Pet();
         public MainGameUI()
         {
-            InitializeComponent();
+            InitializeComponent();          
+            hungerBar.Value = pet.Hunger;
+            tirednessBar.Value = pet.Tiredness;
+            hygeneBar.Value = pet.Hygene;
+            funBar.Value = pet.Fun;
         }
 
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
@@ -22,6 +27,34 @@ namespace Main
             //TODO save before exiting.
             // Exit.
             Application.Exit();
+        }
+
+        private void feedButton_Click(object sender, EventArgs e)
+        {
+            if (pet.Hunger < hungerBar.Maximum)
+            {
+                pet.Hunger += 1;
+                hungerBar.Value = pet.Hunger;
+            }
+        }
+
+        private void sleepButton_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+        private void cleanButton_Click(object sender, EventArgs e)
+        {
+            if (pet.Hygene < hygeneBar.Maximum)
+            {
+                pet.Hygene += 1;
+                hygeneBar.Value = pet.Hygene;
+            }
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            //TODO
         }
     }
 }

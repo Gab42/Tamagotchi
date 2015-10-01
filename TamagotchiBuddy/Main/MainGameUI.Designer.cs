@@ -41,29 +41,37 @@
             // hungerBar
             // 
             this.hungerBar.Location = new System.Drawing.Point(12, 12);
+            this.hungerBar.Maximum = 6;
             this.hungerBar.Name = "hungerBar";
             this.hungerBar.Size = new System.Drawing.Size(145, 32);
+            this.hungerBar.Step = 1;
             this.hungerBar.TabIndex = 0;
             // 
             // tirednessBar
             // 
             this.tirednessBar.Location = new System.Drawing.Point(189, 12);
+            this.tirednessBar.Maximum = 6;
             this.tirednessBar.Name = "tirednessBar";
             this.tirednessBar.Size = new System.Drawing.Size(145, 32);
+            this.tirednessBar.Step = 1;
             this.tirednessBar.TabIndex = 1;
             // 
             // funBar
             // 
             this.funBar.Location = new System.Drawing.Point(544, 12);
+            this.funBar.Maximum = 6;
             this.funBar.Name = "funBar";
             this.funBar.Size = new System.Drawing.Size(145, 32);
+            this.funBar.Step = 1;
             this.funBar.TabIndex = 3;
             // 
             // hygeneBar
             // 
             this.hygeneBar.Location = new System.Drawing.Point(367, 12);
+            this.hygeneBar.Maximum = 6;
             this.hygeneBar.Name = "hygeneBar";
             this.hygeneBar.Size = new System.Drawing.Size(145, 32);
+            this.hygeneBar.Step = 1;
             this.hygeneBar.TabIndex = 2;
             // 
             // feedButton
@@ -74,6 +82,7 @@
             this.feedButton.TabIndex = 5;
             this.feedButton.Text = "Feed";
             this.feedButton.UseVisualStyleBackColor = true;
+            this.feedButton.Click += new System.EventHandler(this.feedButton_Click);
             // 
             // sleepButton
             // 
@@ -83,6 +92,7 @@
             this.sleepButton.TabIndex = 6;
             this.sleepButton.Text = "Lights off";
             this.sleepButton.UseVisualStyleBackColor = true;
+            this.sleepButton.Click += new System.EventHandler(this.sleepButton_Click);
             // 
             // cleanButton
             // 
@@ -92,6 +102,7 @@
             this.cleanButton.TabIndex = 7;
             this.cleanButton.Text = "Clean";
             this.cleanButton.UseVisualStyleBackColor = true;
+            this.cleanButton.Click += new System.EventHandler(this.cleanButton_Click);
             // 
             // playButton
             // 
@@ -101,6 +112,7 @@
             this.playButton.TabIndex = 8;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // MainGameUI
             // 
