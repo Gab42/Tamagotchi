@@ -28,58 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.newGameButton = new System.Windows.Forms.Button();
+            this.loadGameButton = new System.Windows.Forms.Button();
+            this.quitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // newGameButton
             // 
-            this.button1.Location = new System.Drawing.Point(222, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.newGameButton.Location = new System.Drawing.Point(222, 340);
+            this.newGameButton.Name = "newGameButton";
+            this.newGameButton.Size = new System.Drawing.Size(201, 48);
+            this.newGameButton.TabIndex = 0;
+            this.newGameButton.Text = "Start new game";
+            this.newGameButton.UseVisualStyleBackColor = true;
+            this.newGameButton.Click += new System.EventHandler(this.newGameButton_Click);
             // 
-            // button2
+            // loadGameButton
             // 
-            this.button2.Location = new System.Drawing.Point(222, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 48);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.loadGameButton.Location = new System.Drawing.Point(222, 394);
+            this.loadGameButton.Name = "loadGameButton";
+            this.loadGameButton.Size = new System.Drawing.Size(201, 48);
+            this.loadGameButton.TabIndex = 1;
+            this.loadGameButton.Text = "Load game";
+            this.loadGameButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // quitButton
             // 
-            this.button3.Location = new System.Drawing.Point(222, 448);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 48);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Quit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.quitButton.Location = new System.Drawing.Point(222, 448);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(201, 48);
+            this.quitButton.TabIndex = 2;
+            this.quitButton.Text = "Quit";
+            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // InitialMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 564);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.quitButton);
+            this.Controls.Add(this.loadGameButton);
+            this.Controls.Add(this.newGameButton);
             this.Name = "InitialMenu";
             this.Text = "Tamagotchi Buddy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InitialMenu_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button newGameButton;
+        private System.Windows.Forms.Button loadGameButton;
+        private System.Windows.Forms.Button quitButton;
     }
 }
 

@@ -52,10 +52,20 @@
     <Compile Include="InitialMenu.Designer.cs">
       <DependentUpon>InitialMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainGameUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGameUI.Designer.cs">
+      <DependentUpon>MainGameUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InitialMenu.resx">
       <DependentUpon>InitialMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGameUI.resx">
+      <DependentUpon>MainGameUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
