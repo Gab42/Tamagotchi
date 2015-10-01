@@ -34,11 +34,6 @@ namespace Main
             mainGameUI.Size = this.Size;
             this.Hide();
             mainGameUI.Show();
-
-            
-
-            
-
         }
 
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)

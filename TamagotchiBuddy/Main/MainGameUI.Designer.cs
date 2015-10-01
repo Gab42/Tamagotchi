@@ -36,6 +36,10 @@
             this.sleepButton = new System.Windows.Forms.Button();
             this.cleanButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
+            this.petPicture = new System.Windows.Forms.PictureBox();
+            this.heartPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // hungerBar
@@ -114,11 +118,30 @@
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
+            // petPicture
+            // 
+            this.petPicture.Image = global::Main.Properties.Resources.hamsterfeed2;
+            this.petPicture.Location = new System.Drawing.Point(247, 258);
+            this.petPicture.Name = "petPicture";
+            this.petPicture.Size = new System.Drawing.Size(188, 182);
+            this.petPicture.TabIndex = 9;
+            this.petPicture.TabStop = false;
+            // 
+            // heartPicture
+            // 
+            this.heartPicture.Location = new System.Drawing.Point(471, 173);
+            this.heartPicture.Name = "heartPicture";
+            this.heartPicture.Size = new System.Drawing.Size(140, 133);
+            this.heartPicture.TabIndex = 10;
+            this.heartPicture.TabStop = false;
+            // 
             // MainGameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 564);
+            this.Controls.Add(this.heartPicture);
+            this.Controls.Add(this.petPicture);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.cleanButton);
             this.Controls.Add(this.sleepButton);
@@ -130,6 +153,8 @@
             this.Name = "MainGameUI";
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGameUI_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,5 +169,7 @@
         private System.Windows.Forms.Button sleepButton;
         private System.Windows.Forms.Button cleanButton;
         private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.PictureBox petPicture;
+        private System.Windows.Forms.PictureBox heartPicture;
     }
 }

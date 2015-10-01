@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +15,8 @@ namespace Main
     public partial class MainGameUI : Form
     {
         Pet pet = new Pet();
+      //  Image feed2 = ;
+
         public MainGameUI()
         {
             InitializeComponent();          
@@ -20,6 +24,7 @@ namespace Main
             tirednessBar.Value = pet.Tiredness;
             hygeneBar.Value = pet.Hygene;
             funBar.Value = pet.Fun;
+           
         }
 
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,9 +37,38 @@ namespace Main
         private void feedButton_Click(object sender, EventArgs e)
         {
             if (pet.Hunger < hungerBar.Maximum)
-            {
+            {              
+                for (int i = 0; i <= 4; i++)
+                {
+                    if (i%2 == 0)
+                    {
+                        petPicture.Image = Properties.Resources.hamsterfeed1;
+                        petPicture.Refresh();
+                    }
+                    else
+                    {
+                        petPicture.Image = Properties.Resources.hamsterfeed2;
+                        petPicture.Refresh();
+                    }
+                    Thread.Sleep(500);
+                }
                 pet.Hunger += 1;
                 hungerBar.Value = pet.Hunger;
+
+                petPicture.Image = Properties.Resources.hamsterfeed2;
+                petPicture.Refresh();
+                Thread.Sleep(500);               
+                petPicture.Image = Properties.Resources.hamsterhappy;
+                petPicture.Refresh();
+                heartPicture.Image = Properties.Resources.heart;
+                heartPicture.Refresh();
+                Console.Beep(2800, 250);
+                Thread.Sleep(1250);
+                heartPicture.Image = null;
+                heartPicture.Refresh();
+                petPicture.Image = Properties.Resources.hamsterfeed2;
+                petPicture.Refresh();
+
             }
         }
 
@@ -59,5 +93,6 @@ namespace Main
             minigamesMenu.StartPosition = FormStartPosition.CenterParent;
             minigamesMenu.ShowDialog();
         }
+
     }
 }
