@@ -58,6 +58,12 @@
     <Compile Include="MainGameUI.Designer.cs">
       <DependentUpon>MainGameUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinigamesMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinigamesMenu.Designer.cs">
+      <DependentUpon>MinigamesMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainGameUI.resx">
       <DependentUpon>MainGameUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinigamesMenu.resx">
+      <DependentUpon>MinigamesMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

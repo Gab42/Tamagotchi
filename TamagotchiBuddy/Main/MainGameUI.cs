@@ -40,7 +40,7 @@ namespace Main
 
         private void sleepButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            //TODO - lights off animation, pet tiredness bar should start going up slowly.
         }
 
         private void cleanButton_Click(object sender, EventArgs e)
@@ -54,7 +54,10 @@ namespace Main
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            //TODO
+            //TODO launch mini games menu.
+            MinigamesMenu minigamesMenu = new MinigamesMenu();
+            minigamesMenu.StartPosition = FormStartPosition.CenterParent;
+            minigamesMenu.ShowDialog();
         }
     }
 }
