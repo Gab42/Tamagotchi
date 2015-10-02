@@ -37,45 +37,51 @@
             // 
             // minigameButton1
             // 
-            this.minigameButton1.Location = new System.Drawing.Point(35, 28);
+            this.minigameButton1.Location = new System.Drawing.Point(26, 23);
+            this.minigameButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minigameButton1.Name = "minigameButton1";
-            this.minigameButton1.Size = new System.Drawing.Size(142, 33);
+            this.minigameButton1.Size = new System.Drawing.Size(106, 27);
             this.minigameButton1.TabIndex = 0;
             this.minigameButton1.Text = "David";
             this.minigameButton1.UseVisualStyleBackColor = true;
+            this.minigameButton1.Click += new System.EventHandler(this.minigameButton1_Click);
             // 
             // minigameButton2
             // 
-            this.minigameButton2.Location = new System.Drawing.Point(35, 67);
+            this.minigameButton2.Location = new System.Drawing.Point(26, 54);
+            this.minigameButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minigameButton2.Name = "minigameButton2";
-            this.minigameButton2.Size = new System.Drawing.Size(142, 33);
+            this.minigameButton2.Size = new System.Drawing.Size(106, 27);
             this.minigameButton2.TabIndex = 1;
             this.minigameButton2.Text = "Rado";
             this.minigameButton2.UseVisualStyleBackColor = true;
             // 
             // minigameButton3
             // 
-            this.minigameButton3.Location = new System.Drawing.Point(35, 106);
+            this.minigameButton3.Location = new System.Drawing.Point(26, 86);
+            this.minigameButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minigameButton3.Name = "minigameButton3";
-            this.minigameButton3.Size = new System.Drawing.Size(142, 33);
+            this.minigameButton3.Size = new System.Drawing.Size(106, 27);
             this.minigameButton3.TabIndex = 2;
             this.minigameButton3.Text = "Gabi";
             this.minigameButton3.UseVisualStyleBackColor = true;
             // 
             // minigameButton4
             // 
-            this.minigameButton4.Location = new System.Drawing.Point(35, 145);
+            this.minigameButton4.Location = new System.Drawing.Point(26, 118);
+            this.minigameButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minigameButton4.Name = "minigameButton4";
-            this.minigameButton4.Size = new System.Drawing.Size(142, 33);
+            this.minigameButton4.Size = new System.Drawing.Size(106, 27);
             this.minigameButton4.TabIndex = 3;
             this.minigameButton4.Text = "Slav";
             this.minigameButton4.UseVisualStyleBackColor = true;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(35, 224);
+            this.cancelButton.Location = new System.Drawing.Point(26, 182);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(142, 33);
+            this.cancelButton.Size = new System.Drawing.Size(106, 27);
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -83,14 +89,15 @@
             // 
             // MinigamesMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 269);
+            this.ClientSize = new System.Drawing.Size(161, 219);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.minigameButton4);
             this.Controls.Add(this.minigameButton3);
             this.Controls.Add(this.minigameButton2);
             this.Controls.Add(this.minigameButton1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MinigamesMenu";
             this.Text = "Minigames";
             this.ResumeLayout(false);

@@ -21,5 +21,12 @@ namespace Main
         {
             this.Close();
         }
+
+        private void minigameButton1_Click(object sender, EventArgs e)
+        {
+            TicTacToe tictactoe = new TicTacToe();
+            tictactoe.StartPosition = FormStartPosition.CenterParent;
+            tictactoe.ShowDialog();
+        }
     }
 }
