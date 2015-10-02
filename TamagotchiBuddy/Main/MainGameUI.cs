@@ -19,7 +19,8 @@ namespace Main
 
         public MainGameUI()
         {
-            InitializeComponent();          
+            InitializeComponent();        
+            // Set stats.  
             hungerBar.Value = pet.Hunger;
             tirednessBar.Value = pet.Tiredness;
             hygeneBar.Value = pet.Hygene;
@@ -34,6 +35,7 @@ namespace Main
             Application.Exit();
         }
 
+        // Feeding.
         private void feedButton_Click(object sender, EventArgs e)
         {
             if (pet.Hunger < hungerBar.Maximum)
@@ -62,7 +64,7 @@ namespace Main
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.heart;
                 heartPicture.Refresh();
-                Console.Beep(2800, 250);
+                Console.Beep(2700, 250);
                 Thread.Sleep(1250);
                 heartPicture.Image = null;
                 heartPicture.Refresh();
@@ -72,6 +74,7 @@ namespace Main
             }
         }
 
+        // Sleeping.
         private void sleepButton_Click(object sender, EventArgs e)
         {
             //TODO - pet tiredness bar should start going up slowly.
@@ -103,12 +106,45 @@ namespace Main
             }
         }
 
+        // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
             if (pet.Hygene < hygeneBar.Maximum)
-            {
+            {                
+                petPicture.Image = Properties.Resources.hamsterclean;
+                petPicture.Refresh();
+                heartPicture.Image = Properties.Resources.brush;
+                heartPicture.Refresh();
+                int topCoord = heartPicture.Top;
+                int leftCoord = heartPicture.Left;
+                for (int i = 0; i <= 4; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        heartPicture.Top = topCoord;
+                        heartPicture.Left = leftCoord;                  
+                    }
+                    else
+                    {
+                        heartPicture.Top = topCoord - 20;
+                        heartPicture.Left = leftCoord - 20;
+                    }
+                    Thread.Sleep(500);
+                }
+
                 pet.Hygene += 1;
                 hygeneBar.Value = pet.Hygene;
+
+                petPicture.Image = Properties.Resources.hamsterhappy;
+                petPicture.Refresh();
+                heartPicture.Image = Properties.Resources.heart;
+                heartPicture.Refresh();
+                Console.Beep(2700, 250);
+                Thread.Sleep(1250);
+                heartPicture.Image = null;
+                heartPicture.Refresh();
+                petPicture.Image = Properties.Resources.hamsterfeed2;
+                petPicture.Refresh();
             }
         }
 
