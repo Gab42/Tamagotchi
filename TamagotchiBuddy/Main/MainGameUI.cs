@@ -19,7 +19,7 @@ namespace Main
 
         public MainGameUI()
         {
-            InitializeComponent();        
+            InitializeComponent();
             // Set stats.  
             hungerBar.Value = pet.Hunger;
             tirednessBar.Value = pet.Tiredness;
@@ -121,13 +121,21 @@ namespace Main
                 {
                     if (i % 2 == 0)
                     {
+                        heartPicture.Top = topCoord - 20;
+                        heartPicture.Left = leftCoord - 20;
+                        heartPicture.Top = topCoord - 10;
+                        heartPicture.Left = leftCoord - 10;
                         heartPicture.Top = topCoord;
                         heartPicture.Left = leftCoord;                  
                     }
                     else
                     {
+                        heartPicture.Top = topCoord - 10;
+                        heartPicture.Left = leftCoord - 10;
                         heartPicture.Top = topCoord - 20;
                         heartPicture.Left = leftCoord - 20;
+                        heartPicture.Top = topCoord - 30;
+                        heartPicture.Left = leftCoord - 30;
                     }
                     Thread.Sleep(500);
                 }
