@@ -28,5 +28,12 @@ namespace Main
             tictactoe.StartPosition = FormStartPosition.CenterParent;
             tictactoe.ShowDialog();
         }
+
+        private void minigameButton5_Click(object sender, EventArgs e)
+        {
+            Ballgame ballgame = new Ballgame();
+            ballgame.StartPosition = FormStartPosition.CenterParent;
+            ballgame.ShowDialog();
+        }
     }
 }
