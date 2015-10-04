@@ -151,6 +151,7 @@
             this.Controls.Add(this.tirednessBar);
             this.Controls.Add(this.hungerBar);
             this.Name = "MainGameUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGameUI_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();

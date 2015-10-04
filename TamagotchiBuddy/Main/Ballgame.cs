@@ -144,9 +144,6 @@ namespace Main
                 
             }
             Score.Text = "Score: " + score.ToString();
-
-
-
         }
         // end of David's code
        

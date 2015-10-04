@@ -31,9 +31,9 @@ namespace Main
             MainGameUI mainGameUI = new MainGameUI();
             mainGameUI.Left = this.Left;
             mainGameUI.Top = this.Top;
-            mainGameUI.Size = this.Size;
-            this.Hide();
+            mainGameUI.Size = this.Size;          
             mainGameUI.Show();
+            this.Hide();
         }
 
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)

@@ -14,17 +14,18 @@ namespace Main
 {
     public partial class MainGameUI : Form
     {
-        Pet pet = new Pet();
+        
         bool sleepFlag = false;
+
 
         public MainGameUI()
         {
             InitializeComponent();
             // Set stats.  
-            hungerBar.Value = pet.Hunger;
-            tirednessBar.Value = pet.Tiredness;
-            hygeneBar.Value = pet.Hygene;
-            funBar.Value = pet.Fun;
+            hungerBar.Value = Pet.Hunger;
+            tirednessBar.Value = Pet.Tiredness;
+            hygeneBar.Value = Pet.Hygene;
+            funBar.Value = Pet.Fun;
            
         }
 
@@ -38,8 +39,9 @@ namespace Main
         // Feeding.
         private void feedButton_Click(object sender, EventArgs e)
         {
-            if (pet.Hunger < hungerBar.Maximum)
-            {              
+            if (Pet.Hunger < hungerBar.Maximum)
+            {
+                DisableAllButtons();
                 for (int i = 0; i <= 4; i++)
                 {
                     if (i%2 == 0)
@@ -54,23 +56,16 @@ namespace Main
                     }
                     Thread.Sleep(500);
                 }
-                pet.Hunger += 1;
-                hungerBar.Value = pet.Hunger;
+                Pet.Hunger += 1;
+                hungerBar.Value = Pet.Hunger;
 
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
-                Thread.Sleep(500);               
-                petPicture.Image = Properties.Resources.hamsterhappy;
-                petPicture.Refresh();
-                heartPicture.Image = Properties.Resources.heart;
-                heartPicture.Refresh();
-                Console.Beep(2700, 250);
-                Thread.Sleep(1250);
-                heartPicture.Image = null;
-                heartPicture.Refresh();
+                Thread.Sleep(500);
+                PetHappy();
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
-
+                EnableAllButtons();
             }
         }
 
@@ -86,10 +81,8 @@ namespace Main
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.sleep;
                 heartPicture.Refresh();
-
-                feedButton.Enabled = false;
-                cleanButton.Enabled = false;
-                playButton.Enabled = false;
+                DisableAllButtons();
+                sleepButton.Enabled = true;
                 sleepButton.Text = "Lights On";
             }
             else
@@ -99,9 +92,7 @@ namespace Main
                 heartPicture.Image = null;
                 heartPicture.Refresh();
 
-                feedButton.Enabled = true;
-                cleanButton.Enabled = true;
-                playButton.Enabled = true;
+                EnableAllButtons();
                 sleepButton.Text = "Lights Off";
             }
         }
@@ -109,8 +100,9 @@ namespace Main
         // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
-            if (pet.Hygene < hygeneBar.Maximum)
-            {                
+            if (Pet.Hygene < hygeneBar.Maximum)
+            {
+                DisableAllButtons();           
                 petPicture.Image = Properties.Resources.hamsterclean;
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.brush;
@@ -140,19 +132,13 @@ namespace Main
                     Thread.Sleep(500);
                 }
 
-                pet.Hygene += 1;
-                hygeneBar.Value = pet.Hygene;
+                Pet.Hygene += 1;
+                hygeneBar.Value = Pet.Hygene;
 
-                petPicture.Image = Properties.Resources.hamsterhappy;
-                petPicture.Refresh();
-                heartPicture.Image = Properties.Resources.heart;
-                heartPicture.Refresh();
-                Console.Beep(2700, 250);
-                Thread.Sleep(1250);
-                heartPicture.Image = null;
-                heartPicture.Refresh();
+                PetHappy();
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
+                EnableAllButtons();
             }
         }
 
@@ -162,7 +148,35 @@ namespace Main
             MinigamesMenu minigamesMenu = new MinigamesMenu();
             minigamesMenu.StartPosition = FormStartPosition.CenterParent;
             minigamesMenu.ShowDialog();
+            funBar.Value = Pet.Fun;
         }
 
+        public void PetHappy()
+        {
+            petPicture.Image = Properties.Resources.hamsterhappy;
+            petPicture.Refresh();
+            heartPicture.Image = Properties.Resources.heart;
+            heartPicture.Refresh();
+            Console.Beep(2700, 250);
+            Thread.Sleep(1250);
+            heartPicture.Image = null;
+            heartPicture.Refresh();
+        }
+
+        public void DisableAllButtons()
+        {
+            feedButton.Enabled = false;
+            cleanButton.Enabled = false;
+            playButton.Enabled = false;
+            sleepButton.Enabled = false;
+        }
+
+        public void EnableAllButtons()
+        {
+            feedButton.Enabled = true;
+            cleanButton.Enabled = true;
+            playButton.Enabled = true;
+            sleepButton.Enabled = true;
+        }
     }
 }

@@ -34,6 +34,11 @@ namespace Main
             Ballgame ballgame = new Ballgame();
             ballgame.StartPosition = FormStartPosition.CenterParent;
             ballgame.ShowDialog();
+            // Gabi: Fun filling up by 1 on every game
+            if (Pet.Fun < 6)
+            {
+                Pet.Fun += 1;
+            }
         }
     }
 }

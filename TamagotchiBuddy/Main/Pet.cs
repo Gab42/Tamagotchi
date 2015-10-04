@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    class Pet
+    static class Pet
     {
         // Stats.
-        private int hunger;
-        private int tiredness;
-        private int hygene;
-        private int fun;
-
-        // Constructor.
-        public Pet()
-        {
-            hunger = 3;
-            tiredness = 3;
-            hygene = 3;
-            fun = 3;
-        }
+        static private int hunger = 3;
+        static private int tiredness = 3;
+        static private int hygene = 3;
+        static private int fun = 3;
+        static public int gamesPlayed = 0;
 
         // Getter/setters for pet attributes.
-        public int Hunger
+        static public int Hunger
         {
             get
             {
@@ -36,7 +28,7 @@ namespace Main
             }
         }
 
-        public int Hygene
+        static public int Hygene
         {
             get
             {
@@ -48,7 +40,7 @@ namespace Main
             }
         }
 
-        public int Tiredness
+        static public int Tiredness
         {
             get
             {
@@ -60,7 +52,7 @@ namespace Main
             }
         }
 
-        public int Fun
+        static public int Fun
         {
             get
             {

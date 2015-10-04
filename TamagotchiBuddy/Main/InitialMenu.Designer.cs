@@ -71,6 +71,7 @@
             this.Controls.Add(this.loadGameButton);
             this.Controls.Add(this.newGameButton);
             this.Name = "InitialMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InitialMenu_FormClosing);
             this.ResumeLayout(false);

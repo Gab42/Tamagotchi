@@ -268,6 +268,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -294,7 +299,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -321,7 +330,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -348,7 +361,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -375,7 +392,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -402,7 +423,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -429,7 +454,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if (Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;
+                        }
                     }
                     else
                     {
@@ -456,7 +485,11 @@ namespace Main
                         MessageBox.Show("Player 1 Wins!");
                         player1++;
                         player1score.Text = player1.ToString();
-
+                        // Gabi: Fun filling up by 1 on every win
+                        if( Pet.Fun < 6)
+                        {
+                            Pet.Fun += 1;                          
+                        }
                     }
                     else
                     {
