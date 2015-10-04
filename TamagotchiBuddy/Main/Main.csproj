@@ -96,6 +96,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TicTacToe.resx" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,6 +133,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sleep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

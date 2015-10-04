@@ -38,8 +38,14 @@
             this.playButton = new System.Windows.Forms.Button();
             this.petPicture = new System.Windows.Forms.PictureBox();
             this.heartPicture = new System.Windows.Forms.PictureBox();
+            this.foodPictureBox = new System.Windows.Forms.PictureBox();
+            this.cherryButton = new System.Windows.Forms.Button();
+            this.bananaButton = new System.Windows.Forms.Button();
+            this.appleButton = new System.Windows.Forms.Button();
+            this.feedSecondClick = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.petPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // hungerBar
@@ -135,11 +141,68 @@
             this.heartPicture.TabIndex = 10;
             this.heartPicture.TabStop = false;
             // 
+            // foodPictureBox
+            // 
+            this.foodPictureBox.Location = new System.Drawing.Point(75, 173);
+            this.foodPictureBox.Name = "foodPictureBox";
+            this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
+            this.foodPictureBox.TabIndex = 11;
+            this.foodPictureBox.TabStop = false;
+            // 
+            // cherryButton
+            // 
+            this.cherryButton.Location = new System.Drawing.Point(12, 456);
+            this.cherryButton.Name = "cherryButton";
+            this.cherryButton.Size = new System.Drawing.Size(145, 45);
+            this.cherryButton.TabIndex = 12;
+            this.cherryButton.Text = "Cherry";
+            this.cherryButton.UseVisualStyleBackColor = true;
+            this.cherryButton.Visible = false;
+            this.cherryButton.Click += new System.EventHandler(this.cherryButton_Click);
+            // 
+            // bananaButton
+            // 
+            this.bananaButton.Location = new System.Drawing.Point(12, 405);
+            this.bananaButton.Name = "bananaButton";
+            this.bananaButton.Size = new System.Drawing.Size(145, 45);
+            this.bananaButton.TabIndex = 13;
+            this.bananaButton.Text = "Banana";
+            this.bananaButton.UseVisualStyleBackColor = true;
+            this.bananaButton.Visible = false;
+            this.bananaButton.Click += new System.EventHandler(this.bananaButton_Click);
+            // 
+            // appleButton
+            // 
+            this.appleButton.Location = new System.Drawing.Point(12, 354);
+            this.appleButton.Name = "appleButton";
+            this.appleButton.Size = new System.Drawing.Size(145, 45);
+            this.appleButton.TabIndex = 14;
+            this.appleButton.Text = "Apple";
+            this.appleButton.UseVisualStyleBackColor = true;
+            this.appleButton.Visible = false;
+            this.appleButton.Click += new System.EventHandler(this.appleButton_Click);
+            // 
+            // feedSecondClick
+            // 
+            this.feedSecondClick.Location = new System.Drawing.Point(12, 507);
+            this.feedSecondClick.Name = "feedSecondClick";
+            this.feedSecondClick.Size = new System.Drawing.Size(145, 45);
+            this.feedSecondClick.TabIndex = 15;
+            this.feedSecondClick.Text = "Feed";
+            this.feedSecondClick.UseVisualStyleBackColor = true;
+            this.feedSecondClick.Visible = false;
+            this.feedSecondClick.Click += new System.EventHandler(this.feedSecondClick_Click);
+            // 
             // MainGameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 564);
+            this.Controls.Add(this.feedSecondClick);
+            this.Controls.Add(this.appleButton);
+            this.Controls.Add(this.bananaButton);
+            this.Controls.Add(this.cherryButton);
+            this.Controls.Add(this.foodPictureBox);
             this.Controls.Add(this.heartPicture);
             this.Controls.Add(this.petPicture);
             this.Controls.Add(this.playButton);
@@ -156,6 +219,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGameUI_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +236,10 @@
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.PictureBox petPicture;
         private System.Windows.Forms.PictureBox heartPicture;
+        private System.Windows.Forms.PictureBox foodPictureBox;
+        private System.Windows.Forms.Button cherryButton;
+        private System.Windows.Forms.Button bananaButton;
+        private System.Windows.Forms.Button appleButton;
+        private System.Windows.Forms.Button feedSecondClick;
     }
 }

@@ -39,12 +39,46 @@ namespace Main
         // Feeding.
         private void feedButton_Click(object sender, EventArgs e)
         {
+            bananaButton.Visible = true;
+            appleButton.Visible = true;
+            cherryButton.Visible = true;
+            feedSecondClick.Visible = true;
+            feedButton.Visible = false;
+            DisableAllButtons();
+        }
+
+        private void feedSecondClick_Click(object sender, EventArgs e)
+        {
+            EnableAllButtons();
+            bananaButton.Visible = false;
+            appleButton.Visible = false;
+            cherryButton.Visible = false;
+            feedSecondClick.Visible = false;
+            feedButton.Visible = true;
+
+        }
+
+        private void Feed(string type)
+        {
+            bananaButton.Visible = false;
+            appleButton.Visible = false;
+            cherryButton.Visible = false;
+            feedSecondClick.Enabled = false;
+
             if (Pet.Hunger < hungerBar.Maximum)
             {
-                DisableAllButtons();
+                string food1 = type + "1";
+                string food2 = type + "2";
+                string food3 = type + "3";
+                
+                foodPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(food1);
+                foodPictureBox.Visible = true;
+                foodPictureBox.Refresh();
+
+
                 for (int i = 0; i <= 4; i++)
                 {
-                    if (i%2 == 0)
+                    if (i % 2 == 0)
                     {
                         petPicture.Image = Properties.Resources.hamsterfeed1;
                         petPicture.Refresh();
@@ -53,20 +87,38 @@ namespace Main
                     {
                         petPicture.Image = Properties.Resources.hamsterfeed2;
                         petPicture.Refresh();
+                        if (i == 1)
+                        {
+                            foodPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(food2);
+                            foodPictureBox.Refresh();
+                        }
+                        else if (i == 3)
+                        {
+                            foodPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(food3);
+                            foodPictureBox.Refresh();
+                        }
                     }
                     Thread.Sleep(500);
                 }
+
                 Pet.Hunger += 1;
                 hungerBar.Value = Pet.Hunger;
 
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
+                foodPictureBox.Visible = false;
+                foodPictureBox.Refresh();
                 Thread.Sleep(500);
                 PetHappy();
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
-                EnableAllButtons();
+
             }
+
+            feedSecondClick.Enabled = true;
+            EnableAllButtons();
+            feedSecondClick.Visible = false;
+            feedButton.Visible = true;
         }
 
         // Sleeping.
@@ -100,9 +152,9 @@ namespace Main
         // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
+            DisableAllButtons();
             if (Pet.Hygene < hygeneBar.Maximum)
-            {
-                DisableAllButtons();           
+            {                       
                 petPicture.Image = Properties.Resources.hamsterclean;
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.brush;
@@ -165,7 +217,6 @@ namespace Main
 
         public void DisableAllButtons()
         {
-            feedButton.Enabled = false;
             cleanButton.Enabled = false;
             playButton.Enabled = false;
             sleepButton.Enabled = false;
@@ -173,10 +224,24 @@ namespace Main
 
         public void EnableAllButtons()
         {
-            feedButton.Enabled = true;
             cleanButton.Enabled = true;
             playButton.Enabled = true;
             sleepButton.Enabled = true;
+        }
+
+        private void cherryButton_Click(object sender, EventArgs e)
+        {
+            Feed("cherry");
+        }
+
+        private void bananaButton_Click(object sender, EventArgs e)
+        {
+            Feed("banana");
+        }
+
+        private void appleButton_Click(object sender, EventArgs e)
+        {
+            Feed("apple");
         }
     }
 }
