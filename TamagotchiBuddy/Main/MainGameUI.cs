@@ -39,9 +39,7 @@ namespace Main
         // Feeding.
         private void feedButton_Click(object sender, EventArgs e)
         {
-            bananaButton.Visible = true;
-            appleButton.Visible = true;
-            cherryButton.Visible = true;
+            FoodMenuVisibility(true);
             feedSecondClick.Visible = true;
             feedButton.Visible = false;
             DisableAllButtons();
@@ -50,19 +48,14 @@ namespace Main
         private void feedSecondClick_Click(object sender, EventArgs e)
         {
             EnableAllButtons();
-            bananaButton.Visible = false;
-            appleButton.Visible = false;
-            cherryButton.Visible = false;
+            FoodMenuVisibility(false);
             feedSecondClick.Visible = false;
             feedButton.Visible = true;
-
         }
 
         private void Feed(string type)
         {
-            bananaButton.Visible = false;
-            appleButton.Visible = false;
-            cherryButton.Visible = false;
+            FoodMenuVisibility(false);
             feedSecondClick.Enabled = false;
 
             if (Pet.Hunger < hungerBar.Maximum)
@@ -74,7 +67,6 @@ namespace Main
                 foodPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(food1);
                 foodPictureBox.Visible = true;
                 foodPictureBox.Refresh();
-
 
                 for (int i = 0; i <= 4; i++)
                 {
@@ -112,7 +104,6 @@ namespace Main
                 PetHappy();
                 petPicture.Image = Properties.Resources.hamsterfeed2;
                 petPicture.Refresh();
-
             }
 
             feedSecondClick.Enabled = true;
@@ -227,6 +218,13 @@ namespace Main
             cleanButton.Enabled = true;
             playButton.Enabled = true;
             sleepButton.Enabled = true;
+        }
+
+        private void FoodMenuVisibility(bool visibility)
+        {
+            bananaButton.Visible = visibility;
+            appleButton.Visible = visibility;
+            cherryButton.Visible = visibility;
         }
 
         private void cherryButton_Click(object sender, EventArgs e)

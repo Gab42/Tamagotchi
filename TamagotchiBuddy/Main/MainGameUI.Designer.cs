@@ -36,20 +36,21 @@
             this.sleepButton = new System.Windows.Forms.Button();
             this.cleanButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
-            this.petPicture = new System.Windows.Forms.PictureBox();
-            this.heartPicture = new System.Windows.Forms.PictureBox();
-            this.foodPictureBox = new System.Windows.Forms.PictureBox();
             this.cherryButton = new System.Windows.Forms.Button();
             this.bananaButton = new System.Windows.Forms.Button();
             this.appleButton = new System.Windows.Forms.Button();
             this.feedSecondClick = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).BeginInit();
+            this.foodPictureBox = new System.Windows.Forms.PictureBox();
+            this.heartPicture = new System.Windows.Forms.PictureBox();
+            this.petPicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // hungerBar
             // 
+            this.hungerBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.hungerBar.Location = new System.Drawing.Point(12, 12);
             this.hungerBar.Maximum = 6;
             this.hungerBar.Name = "hungerBar";
@@ -59,6 +60,7 @@
             // 
             // tirednessBar
             // 
+            this.tirednessBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tirednessBar.Location = new System.Drawing.Point(189, 12);
             this.tirednessBar.Maximum = 6;
             this.tirednessBar.Name = "tirednessBar";
@@ -68,6 +70,7 @@
             // 
             // funBar
             // 
+            this.funBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.funBar.Location = new System.Drawing.Point(544, 12);
             this.funBar.Maximum = 6;
             this.funBar.Name = "funBar";
@@ -77,6 +80,7 @@
             // 
             // hygeneBar
             // 
+            this.hygeneBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.hygeneBar.Location = new System.Drawing.Point(367, 12);
             this.hygeneBar.Maximum = 6;
             this.hygeneBar.Name = "hygeneBar";
@@ -124,31 +128,6 @@
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // petPicture
-            // 
-            this.petPicture.Image = global::Main.Properties.Resources.hamsterfeed2;
-            this.petPicture.Location = new System.Drawing.Point(247, 258);
-            this.petPicture.Name = "petPicture";
-            this.petPicture.Size = new System.Drawing.Size(188, 182);
-            this.petPicture.TabIndex = 9;
-            this.petPicture.TabStop = false;
-            // 
-            // heartPicture
-            // 
-            this.heartPicture.Location = new System.Drawing.Point(471, 173);
-            this.heartPicture.Name = "heartPicture";
-            this.heartPicture.Size = new System.Drawing.Size(140, 133);
-            this.heartPicture.TabIndex = 10;
-            this.heartPicture.TabStop = false;
-            // 
-            // foodPictureBox
-            // 
-            this.foodPictureBox.Location = new System.Drawing.Point(75, 173);
-            this.foodPictureBox.Name = "foodPictureBox";
-            this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
-            this.foodPictureBox.TabIndex = 11;
-            this.foodPictureBox.TabStop = false;
-            // 
             // cherryButton
             // 
             this.cherryButton.Location = new System.Drawing.Point(12, 456);
@@ -193,6 +172,31 @@
             this.feedSecondClick.Visible = false;
             this.feedSecondClick.Click += new System.EventHandler(this.feedSecondClick_Click);
             // 
+            // foodPictureBox
+            // 
+            this.foodPictureBox.Location = new System.Drawing.Point(75, 173);
+            this.foodPictureBox.Name = "foodPictureBox";
+            this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
+            this.foodPictureBox.TabIndex = 11;
+            this.foodPictureBox.TabStop = false;
+            // 
+            // heartPicture
+            // 
+            this.heartPicture.Location = new System.Drawing.Point(471, 173);
+            this.heartPicture.Name = "heartPicture";
+            this.heartPicture.Size = new System.Drawing.Size(140, 133);
+            this.heartPicture.TabIndex = 10;
+            this.heartPicture.TabStop = false;
+            // 
+            // petPicture
+            // 
+            this.petPicture.Image = global::Main.Properties.Resources.hamsterfeed2;
+            this.petPicture.Location = new System.Drawing.Point(247, 258);
+            this.petPicture.Name = "petPicture";
+            this.petPicture.Size = new System.Drawing.Size(188, 182);
+            this.petPicture.TabIndex = 9;
+            this.petPicture.TabStop = false;
+            // 
             // MainGameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,9 +221,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGameUI_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
