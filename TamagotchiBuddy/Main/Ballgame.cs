@@ -9,7 +9,7 @@ namespace Main
         Bitmap Backbuffer;
         Timer GameTimer = new Timer();
         // david's code
-        const int BallAxisSpeed = 6;
+        const int BallAxisSpeed = 4;
         int score = 0;
         Point BallPos = new Point(100, 100);
         Point BallSpeed = new Point(BallAxisSpeed, BallAxisSpeed);
@@ -141,7 +141,7 @@ namespace Main
             {
                 GameTimer.Stop();
                 MessageBox.Show("GAME OVER!!!");
-                
+                this.Close();
             }
             Score.Text = "Score: " + score.ToString();
         }
