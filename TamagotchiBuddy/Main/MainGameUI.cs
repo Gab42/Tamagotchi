@@ -13,11 +13,7 @@ using System.Windows.Forms;
 namespace Main
 {
     public partial class MainGameUI : Form
-    {
-        
-       
-
-
+    {       
         public MainGameUI()
         {
             InitializeComponent();
@@ -30,6 +26,45 @@ namespace Main
             Pet.SleepFlag = false;
         }
 
+        // Happy animation.
+        public void PetHappy()
+        {
+            petPicture.Image = Properties.Resources.hamsterhappy;
+            petPicture.Refresh();
+            heartPicture.Image = Properties.Resources.heart;
+            heartPicture.Refresh();
+            Console.Beep(2700, 250);
+            Thread.Sleep(1250);
+            heartPicture.Image = null;
+            heartPicture.Refresh();
+            petPicture.Image = Properties.Resources.hamsterfeed2;
+            petPicture.Refresh();
+        }
+
+        // Disable buttons (used while animations are running).
+        public void DisableAllButtons()
+        {
+            cleanButton.Enabled = false;
+            playButton.Enabled = false;
+            sleepButton.Enabled = false;
+        }
+
+        // Enable buttons (after animations).
+        public void EnableAllButtons()
+        {
+            cleanButton.Enabled = true;
+            playButton.Enabled = true;
+            sleepButton.Enabled = true;
+        }
+
+        private void FoodMenuVisibility(bool visibility)
+        {
+            bananaButton.Visible = visibility;
+            appleButton.Visible = visibility;
+            cherryButton.Visible = visibility;
+        }
+
+        // Exit.
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             //TODO save before exiting.
@@ -38,6 +73,7 @@ namespace Main
         }
 
         // Feeding.
+        // Show food types menu.
         private void feedButton_Click(object sender, EventArgs e)
         {
             FoodMenuVisibility(true);
@@ -46,6 +82,7 @@ namespace Main
             DisableAllButtons();
         }
 
+        // Hide food types menu.
         private void feedSecondClick_Click(object sender, EventArgs e)
         {
             EnableAllButtons();
@@ -54,6 +91,7 @@ namespace Main
             feedButton.Visible = true;
         }
 
+        // Feeding animation.
         private void Feed(string type)
         {
             FoodMenuVisibility(false);
@@ -103,8 +141,6 @@ namespace Main
                 foodPictureBox.Refresh();
                 Thread.Sleep(500);
                 PetHappy();
-                petPicture.Image = Properties.Resources.hamsterfeed2;
-                petPicture.Refresh();
             }
 
             feedSecondClick.Enabled = true;
@@ -180,54 +216,24 @@ namespace Main
                 hygeneBar.Value = Pet.Hygene;
 
                 PetHappy();
-                petPicture.Image = Properties.Resources.hamsterfeed2;
-                petPicture.Refresh();
                 EnableAllButtons();
             }
         }
 
+        // Launch Minigames menu.
         private void playButton_Click(object sender, EventArgs e)
-        {
-            //TODO launch mini games menu.
+        {         
             MinigamesMenu minigamesMenu = new MinigamesMenu();
             minigamesMenu.StartPosition = FormStartPosition.CenterParent;
             minigamesMenu.ShowDialog();
-            funBar.Value = Pet.Fun;
+            if (funBar.Value != Pet.Fun)
+            {
+                PetHappy();
+                funBar.Value = Pet.Fun;
+            }
         }
-
-        public void PetHappy()
-        {
-            petPicture.Image = Properties.Resources.hamsterhappy;
-            petPicture.Refresh();
-            heartPicture.Image = Properties.Resources.heart;
-            heartPicture.Refresh();
-            Console.Beep(2700, 250);
-            Thread.Sleep(1250);
-            heartPicture.Image = null;
-            heartPicture.Refresh();
-        }
-
-        public void DisableAllButtons()
-        {
-            cleanButton.Enabled = false;
-            playButton.Enabled = false;
-            sleepButton.Enabled = false;
-        }
-
-        public void EnableAllButtons()
-        {
-            cleanButton.Enabled = true;
-            playButton.Enabled = true;
-            sleepButton.Enabled = true;
-        }
-
-        private void FoodMenuVisibility(bool visibility)
-        {
-            bananaButton.Visible = visibility;
-            appleButton.Visible = visibility;
-            cherryButton.Visible = visibility;
-        }
-
+        
+        // Feed chosen type of food.
         private void cherryButton_Click(object sender, EventArgs e)
         {
             Feed("cherry");

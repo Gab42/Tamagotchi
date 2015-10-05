@@ -17,6 +17,7 @@ namespace Main
             InitializeComponent();
         }
 
+        // Exit.
         private void quitButton_Click(object sender, EventArgs e)
         {
             DialogResult result1 = MessageBox.Show("Do you really want to exit the game?", "Exit?", MessageBoxButtons.YesNo);
@@ -35,6 +36,8 @@ namespace Main
             mainGameUI.Show();
             this.Hide();
         }
+
+        //TODO Load game.
 
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
