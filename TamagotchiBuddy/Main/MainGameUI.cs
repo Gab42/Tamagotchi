@@ -21,6 +21,7 @@ namespace Main
         public MainGameUI()
         {
             InitializeComponent();
+
             // Set stats.  
             hungerBar.Value = Pet.Hunger;
             tirednessBar.Value = Pet.Tiredness;
@@ -32,7 +33,7 @@ namespace Main
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             //TODO save before exiting.
-            // Exit.
+            // Exit
             Application.Exit();
         }
 
