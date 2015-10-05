@@ -15,7 +15,7 @@ namespace Main
     public partial class MainGameUI : Form
     {
         
-        bool sleepFlag = false;
+       
 
 
         public MainGameUI()
@@ -27,7 +27,7 @@ namespace Main
             tirednessBar.Value = Pet.Tiredness;
             hygeneBar.Value = Pet.Hygene;
             funBar.Value = Pet.Fun;
-           
+            Pet.SleepFlag = false;
         }
 
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
@@ -118,8 +118,8 @@ namespace Main
         {
             //TODO - pet tiredness bar should start going up slowly.
 
-            sleepFlag = !sleepFlag;
-            if (sleepFlag)
+            Pet.SleepFlag = !Pet.SleepFlag;
+            if (Pet.SleepFlag)
             {
                 petPicture.Image = Properties.Resources.hamstersleep;
                 petPicture.Refresh();
