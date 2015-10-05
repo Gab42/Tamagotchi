@@ -74,8 +74,9 @@
             this.minigameButton4.Name = "minigameButton4";
             this.minigameButton4.Size = new System.Drawing.Size(106, 27);
             this.minigameButton4.TabIndex = 3;
-            this.minigameButton4.Text = "Slav";
+            this.minigameButton4.Text = "Slav - Match Two";
             this.minigameButton4.UseVisualStyleBackColor = true;
+            this.minigameButton4.Click += new System.EventHandler(this.minigameButton4_Click);
             // 
             // cancelButton
             // 

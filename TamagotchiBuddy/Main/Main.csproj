@@ -62,6 +62,12 @@
     <Compile Include="MainGameUI.Designer.cs">
       <DependentUpon>MainGameUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatchTwoGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchTwoGame.Designer.cs">
+      <DependentUpon>MatchTwoGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="MinigamesMenu.cs">
       <SubType>Form</SubType>
     </Compile>
