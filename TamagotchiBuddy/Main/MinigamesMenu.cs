@@ -43,7 +43,9 @@ namespace Main
 
         private void minigameButton4_Click(object sender, EventArgs e)
         {
-            
+            MatchTwoGame matchTwoGame = new MatchTwoGame();
+            matchTwoGame.StartPosition = FormStartPosition.CenterParent;
+            matchTwoGame.ShowDialog();   
         }
     }
 }

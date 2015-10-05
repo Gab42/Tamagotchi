@@ -88,6 +88,9 @@
     <EmbeddedResource Include="MainGameUI.resx">
       <DependentUpon>MainGameUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MatchTwoGame.resx">
+      <DependentUpon>MatchTwoGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MinigamesMenu.resx">
       <DependentUpon>MinigamesMenu.cs</DependentUpon>
     </EmbeddedResource>
