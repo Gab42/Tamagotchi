@@ -500,6 +500,11 @@ namespace Main
                     }
                     cleargame();
                 }
+                else if(button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "")
+                {
+                    MessageBox.Show("Draw !");
+                    cleargame();
+                }
             }
         }
         public void cleargame()
@@ -550,13 +555,6 @@ namespace Main
             cleargame();
         }
 
-        void ResetClick(object sender, EventArgs e)
-        {
-            player1score.Text = "";
-            player2score.Text = "";
-            player1 = 0;
-            player2 = 0;
-            cleargame();
-        }
+        
     }
 }
