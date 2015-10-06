@@ -17,6 +17,24 @@ namespace Main
         static public int gamesPlayed = 0;
         static private bool sleepFlag = false;
 
+        static public bool LoadGame()
+        {
+            if (File.Exists("../../saveGame.txt"))
+            {
+                string[] saveData = File.ReadAllLines("../../saveGame.txt");
+                Pet.Hunger = int.Parse(saveData[0]);
+                Pet.Tiredness = int.Parse(saveData[1]);
+                Pet.Hygene = int.Parse(saveData[2]);
+                Pet.Fun = int.Parse(saveData[3]);
+                Pet.gamesPlayed = int.Parse(saveData[4]);
+                Pet.SleepFlag = bool.Parse(saveData[5]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         static public void SaveGame()
         {
             var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);

@@ -50,13 +50,11 @@ namespace Main
         private void loadGameButton_Click(object sender, EventArgs e)
         {
             //Load game from saveGame.txt.
-            string[] saveData = File.ReadAllLines("../../saveGame.txt");
-            Pet.Hunger = int.Parse(saveData[0]);         
-            Pet.Tiredness = int.Parse(saveData[1]);
-            Pet.Hygene = int.Parse(saveData[2]);
-            Pet.Fun = int.Parse(saveData[3]);
-            Pet.gamesPlayed = int.Parse(saveData[4]);
-            Pet.SleepFlag = bool.Parse(saveData[5]);
+            bool saveFileExists = Pet.LoadGame();
+            if (!saveFileExists)
+            {
+                MessageBox.Show("No save file found! Starting new game...");
+            }
             //Show main game window.
             MainGameUI mainGameUI = new MainGameUI();
             mainGameUI.Left = this.Left;
