@@ -15,6 +15,7 @@ namespace Main
         static private int fun = 3;
         static public int gamesPlayed = 0;
         static private bool sleepFlag = false;
+        
 
         // Getter/setters for pet attributes.
         static public bool SleepFlag

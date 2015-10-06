@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -67,7 +68,17 @@ namespace Main
         // Exit.
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //TODO save before exiting.
+            //Save before exiting.
+            var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
+            try
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag);
+                fileStream.Write(bytes, 0, bytes.Length);
+            }
+            finally
+            {
+                fileStream.Close();
+            }
             // Exit
             Application.Exit();
         }
