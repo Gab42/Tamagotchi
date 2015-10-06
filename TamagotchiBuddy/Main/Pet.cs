@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,20 @@ namespace Main
         static private int fun = 3;
         static public int gamesPlayed = 0;
         static private bool sleepFlag = false;
-        
+
+        static public void SaveGame()
+        {
+            var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
+            try
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag);
+                fileStream.Write(bytes, 0, bytes.Length);
+            }
+            finally
+            {
+                fileStream.Close();
+            }
+        }
 
         // Getter/setters for pet attributes.
         static public bool SleepFlag

@@ -43,18 +43,7 @@ namespace Main
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Exit.
-           
-        var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
-            try
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger +Environment.NewLine +Pet.Tiredness+ Environment.NewLine + Pet.Hygene+ Environment.NewLine + Pet.Fun+ Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag);
-                fileStream.Write(bytes, 0, bytes.Length);
-            }
-            finally
-            {
-                fileStream.Close();
-            }
-
+            Pet.SaveGame();
             Application.Exit();
         }
 

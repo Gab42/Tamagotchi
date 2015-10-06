@@ -68,18 +68,7 @@ namespace Main
         // Exit.
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Save before exiting.
-            var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
-            try
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag);
-                fileStream.Write(bytes, 0, bytes.Length);
-            }
-            finally
-            {
-                fileStream.Close();
-            }
-            // Exit
+            Pet.SaveGame();
             Application.Exit();
         }
 
@@ -100,6 +89,22 @@ namespace Main
             FoodMenuVisibility(false);
             feedSecondClick.Visible = false;
             feedButton.Visible = true;
+        }
+
+        // Feed chosen type of food.
+        private void cherryButton_Click(object sender, EventArgs e)
+        {
+            Feed("cherry");
+        }
+
+        private void bananaButton_Click(object sender, EventArgs e)
+        {
+            Feed("banana");
+        }
+
+        private void appleButton_Click(object sender, EventArgs e)
+        {
+            Feed("apple");
         }
 
         // Feeding animation.
@@ -173,6 +178,7 @@ namespace Main
                 heartPicture.Image = Properties.Resources.sleep;
                 heartPicture.Refresh();
                 DisableAllButtons();
+                feedButton.Enabled = false;
                 sleepButton.Enabled = true;
                 sleepButton.Text = "Lights On";
             }
@@ -184,6 +190,7 @@ namespace Main
                 heartPicture.Refresh();
 
                 EnableAllButtons();
+                feedButton.Enabled = true;
                 sleepButton.Text = "Lights Off";
             }
         }
@@ -242,22 +249,6 @@ namespace Main
                 PetHappy();
                 funBar.Value = Pet.Fun;
             }
-        }
-        
-        // Feed chosen type of food.
-        private void cherryButton_Click(object sender, EventArgs e)
-        {
-            Feed("cherry");
-        }
-
-        private void bananaButton_Click(object sender, EventArgs e)
-        {
-            Feed("banana");
-        }
-
-        private void appleButton_Click(object sender, EventArgs e)
-        {
-            Feed("apple");
-        }
+        }     
     }
 }
