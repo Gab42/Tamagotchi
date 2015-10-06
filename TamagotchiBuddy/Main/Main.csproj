@@ -49,7 +49,9 @@
     <Compile Include="Ballgame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ballgame.Designer.cs" />
+    <Compile Include="Ballgame.Designer.cs">
+	      <DependentUpon>Ballgame.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitialMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +82,12 @@
     <Compile Include="TicTacToe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicTacToe.Designer.cs" />
-    <EmbeddedResource Include="Ballgame.resx" />
+    <Compile Include="TicTacToe.Designer.cs">
+	      <DependentUpon>TicTacToe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ballgame.resx">
+	      <DependentUpon>Ballgame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InitialMenu.resx">
       <DependentUpon>InitialMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,7 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TicTacToe.resx" />
+    <EmbeddedResource Include="TicTacToe.resx">
+		      <DependentUpon>TicTacToe.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
