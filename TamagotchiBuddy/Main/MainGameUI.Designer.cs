@@ -101,6 +101,7 @@
             // feedButton
             // 
             this.feedButton.BackColor = System.Drawing.Color.Silver;
+            this.feedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.feedButton.Location = new System.Drawing.Point(12, 507);
             this.feedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedButton.Name = "feedButton";
