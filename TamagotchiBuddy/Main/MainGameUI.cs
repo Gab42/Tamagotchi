@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace Main
 {
     public partial class MainGameUI : Form
-    {       
+    {
         public MainGameUI()
         {
             InitializeComponent();
@@ -130,7 +130,7 @@ namespace Main
                 string food1 = type + "1";
                 string food2 = type + "2";
                 string food3 = type + "3";
-                
+
                 foodPictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(food1);
                 foodPictureBox.Visible = true;
                 foodPictureBox.Refresh();
@@ -210,7 +210,7 @@ namespace Main
         // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
-            
+
             if (Pet.Hygene < hygeneBar.Maximum)
             {
                 DisableAllButtons();
@@ -229,7 +229,7 @@ namespace Main
                         heartPicture.Top = topCoord - 10;
                         heartPicture.Left = leftCoord - 10;
                         heartPicture.Top = topCoord;
-                        heartPicture.Left = leftCoord;                  
+                        heartPicture.Left = leftCoord;
                     }
                     else
                     {
@@ -253,7 +253,7 @@ namespace Main
 
         // Launch Minigames menu.
         private void playButton_Click(object sender, EventArgs e)
-        {         
+        {
             MinigamesMenu minigamesMenu = new MinigamesMenu();
             minigamesMenu.StartPosition = FormStartPosition.CenterParent;
             minigamesMenu.ShowDialog();
@@ -261,6 +261,40 @@ namespace Main
             {
                 PetHappy();
                 funBar.Value = Pet.Fun;
+            }
+        }
+        //Stat decay timers
+        
+        //Tirednes(Energy)
+        private void energyTimer_Tick(object sender, EventArgs e)
+        {
+            if (Pet.Tiredness >= 1 && Pet.SleepFlag == false)
+            {
+                Pet.Tiredness--;
+            }
+            else
+            {
+                if (Pet.Tiredness < 6)
+                {
+                    Pet.Tiredness++;
+                }
+            }
+        }
+        //Hygene
+        private void hygeneTimer_Tick(object sender, EventArgs e)
+        {
+            if (Pet.Hygene >= 1)
+            {
+                Pet.Hygene--;
+            }
+            
+        }
+        //Hunger
+        private void hungerTimer_Tick(object sender, EventArgs e)
+        {
+            if (Pet.Hunger >= 1)
+            {
+                Pet.Hunger--;
             }
         }
     }
