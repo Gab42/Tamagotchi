@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Main
@@ -34,11 +27,6 @@ namespace Main
             Ballgame ballgame = new Ballgame();
             ballgame.StartPosition = FormStartPosition.CenterParent;
             ballgame.ShowDialog();
-            // Gabi: Fun filling up by 1 on every game
-            if (Pet.Fun < 6)
-            {
-                Pet.Fun += 1;
-            }
         }
 
         private void minigameButton4_Click(object sender, EventArgs e)

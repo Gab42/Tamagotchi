@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Main
 {
@@ -15,7 +13,7 @@ namespace Main
         static private int hygene;
         static private int fun;        
         static private bool sleepFlag;
-        static public int gamesPlayed = 0;
+        //static public int gamesPlayed = 0;
         static private DateTime lastPlayed = DateTime.Now;
 
         static public void NewGame()
@@ -32,9 +30,8 @@ namespace Main
             if (File.Exists("../../saveGame.txt"))
             {              
                 string[] saveData = File.ReadAllLines("../../saveGame.txt");
-                var timePeriod = Convert.ToInt32((DateTime.Now - DateTime.Parse(saveData[6])).TotalHours)/2;
-                Pet.gamesPlayed = 0;
-                Pet.SleepFlag = bool.Parse(saveData[5]);               
+                var timePeriod = Convert.ToInt32((DateTime.Now - DateTime.Parse(saveData[5])).TotalHours)/2;
+                Pet.SleepFlag = bool.Parse(saveData[4]);               
                 Pet.Hunger = int.Parse(saveData[0]) - timePeriod;
                 Pet.Hygene = int.Parse(saveData[2]) - timePeriod;
                 Pet.Fun = int.Parse(saveData[3]) - timePeriod;
@@ -82,7 +79,7 @@ namespace Main
             var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
             try
             {
-                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag + Environment.NewLine + Pet.lastPlayed);
+                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.SleepFlag + Environment.NewLine + Pet.lastPlayed);
                 fileStream.Write(bytes, 0, bytes.Length);
             }
             finally
@@ -151,6 +148,5 @@ namespace Main
                 fun = value;
             }
         }
-
     }
 }

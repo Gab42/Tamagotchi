@@ -45,8 +45,6 @@
             this.heartPicture = new System.Windows.Forms.PictureBox();
             this.petPicture = new System.Windows.Forms.PictureBox();
             this.energyTimer = new System.Windows.Forms.Timer(this.components);
-            this.hygeneTimer = new System.Windows.Forms.Timer(this.components);
-            this.hungerTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPicture)).BeginInit();
@@ -55,53 +53,53 @@
             // hungerBar
             // 
             this.hungerBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.hungerBar.Location = new System.Drawing.Point(9, 10);
-            this.hungerBar.Margin = new System.Windows.Forms.Padding(2);
+            this.hungerBar.Location = new System.Drawing.Point(12, 12);
+            this.hungerBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hungerBar.Maximum = 6;
             this.hungerBar.Name = "hungerBar";
-            this.hungerBar.Size = new System.Drawing.Size(109, 26);
+            this.hungerBar.Size = new System.Drawing.Size(145, 32);
             this.hungerBar.Step = 1;
             this.hungerBar.TabIndex = 0;
             // 
             // tirednessBar
             // 
             this.tirednessBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tirednessBar.Location = new System.Drawing.Point(142, 10);
-            this.tirednessBar.Margin = new System.Windows.Forms.Padding(2);
+            this.tirednessBar.Location = new System.Drawing.Point(189, 12);
+            this.tirednessBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tirednessBar.Maximum = 6;
             this.tirednessBar.Name = "tirednessBar";
-            this.tirednessBar.Size = new System.Drawing.Size(109, 26);
+            this.tirednessBar.Size = new System.Drawing.Size(145, 32);
             this.tirednessBar.Step = 1;
             this.tirednessBar.TabIndex = 1;
             // 
             // funBar
             // 
             this.funBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.funBar.Location = new System.Drawing.Point(408, 10);
-            this.funBar.Margin = new System.Windows.Forms.Padding(2);
+            this.funBar.Location = new System.Drawing.Point(544, 12);
+            this.funBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.funBar.Maximum = 6;
             this.funBar.Name = "funBar";
-            this.funBar.Size = new System.Drawing.Size(109, 26);
+            this.funBar.Size = new System.Drawing.Size(145, 32);
             this.funBar.Step = 1;
             this.funBar.TabIndex = 3;
             // 
             // hygeneBar
             // 
             this.hygeneBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.hygeneBar.Location = new System.Drawing.Point(275, 10);
-            this.hygeneBar.Margin = new System.Windows.Forms.Padding(2);
+            this.hygeneBar.Location = new System.Drawing.Point(367, 12);
+            this.hygeneBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hygeneBar.Maximum = 6;
             this.hygeneBar.Name = "hygeneBar";
-            this.hygeneBar.Size = new System.Drawing.Size(109, 26);
+            this.hygeneBar.Size = new System.Drawing.Size(145, 32);
             this.hygeneBar.Step = 1;
             this.hygeneBar.TabIndex = 2;
             // 
             // feedButton
             // 
-            this.feedButton.Location = new System.Drawing.Point(9, 412);
-            this.feedButton.Margin = new System.Windows.Forms.Padding(2);
+            this.feedButton.Location = new System.Drawing.Point(12, 507);
+            this.feedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedButton.Name = "feedButton";
-            this.feedButton.Size = new System.Drawing.Size(109, 37);
+            this.feedButton.Size = new System.Drawing.Size(145, 46);
             this.feedButton.TabIndex = 5;
             this.feedButton.Text = "Feed";
             this.feedButton.UseVisualStyleBackColor = true;
@@ -109,10 +107,10 @@
             // 
             // sleepButton
             // 
-            this.sleepButton.Location = new System.Drawing.Point(142, 412);
-            this.sleepButton.Margin = new System.Windows.Forms.Padding(2);
+            this.sleepButton.Location = new System.Drawing.Point(189, 507);
+            this.sleepButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sleepButton.Name = "sleepButton";
-            this.sleepButton.Size = new System.Drawing.Size(109, 37);
+            this.sleepButton.Size = new System.Drawing.Size(145, 46);
             this.sleepButton.TabIndex = 6;
             this.sleepButton.Text = "Lights Off";
             this.sleepButton.UseVisualStyleBackColor = true;
@@ -120,10 +118,10 @@
             // 
             // cleanButton
             // 
-            this.cleanButton.Location = new System.Drawing.Point(275, 412);
-            this.cleanButton.Margin = new System.Windows.Forms.Padding(2);
+            this.cleanButton.Location = new System.Drawing.Point(367, 507);
+            this.cleanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cleanButton.Name = "cleanButton";
-            this.cleanButton.Size = new System.Drawing.Size(109, 37);
+            this.cleanButton.Size = new System.Drawing.Size(145, 46);
             this.cleanButton.TabIndex = 7;
             this.cleanButton.Text = "Clean";
             this.cleanButton.UseVisualStyleBackColor = true;
@@ -131,10 +129,10 @@
             // 
             // playButton
             // 
-            this.playButton.Location = new System.Drawing.Point(408, 412);
-            this.playButton.Margin = new System.Windows.Forms.Padding(2);
+            this.playButton.Location = new System.Drawing.Point(544, 507);
+            this.playButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(109, 37);
+            this.playButton.Size = new System.Drawing.Size(145, 46);
             this.playButton.TabIndex = 8;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
@@ -142,10 +140,10 @@
             // 
             // cherryButton
             // 
-            this.cherryButton.Location = new System.Drawing.Point(9, 370);
-            this.cherryButton.Margin = new System.Windows.Forms.Padding(2);
+            this.cherryButton.Location = new System.Drawing.Point(12, 455);
+            this.cherryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cherryButton.Name = "cherryButton";
-            this.cherryButton.Size = new System.Drawing.Size(109, 37);
+            this.cherryButton.Size = new System.Drawing.Size(145, 46);
             this.cherryButton.TabIndex = 12;
             this.cherryButton.Text = "Cherry";
             this.cherryButton.UseVisualStyleBackColor = true;
@@ -154,10 +152,10 @@
             // 
             // bananaButton
             // 
-            this.bananaButton.Location = new System.Drawing.Point(9, 329);
-            this.bananaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.bananaButton.Location = new System.Drawing.Point(12, 405);
+            this.bananaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bananaButton.Name = "bananaButton";
-            this.bananaButton.Size = new System.Drawing.Size(109, 37);
+            this.bananaButton.Size = new System.Drawing.Size(145, 46);
             this.bananaButton.TabIndex = 13;
             this.bananaButton.Text = "Banana";
             this.bananaButton.UseVisualStyleBackColor = true;
@@ -166,10 +164,10 @@
             // 
             // appleButton
             // 
-            this.appleButton.Location = new System.Drawing.Point(9, 288);
-            this.appleButton.Margin = new System.Windows.Forms.Padding(2);
+            this.appleButton.Location = new System.Drawing.Point(12, 354);
+            this.appleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.appleButton.Name = "appleButton";
-            this.appleButton.Size = new System.Drawing.Size(109, 37);
+            this.appleButton.Size = new System.Drawing.Size(145, 46);
             this.appleButton.TabIndex = 14;
             this.appleButton.Text = "Apple";
             this.appleButton.UseVisualStyleBackColor = true;
@@ -178,10 +176,10 @@
             // 
             // feedSecondClick
             // 
-            this.feedSecondClick.Location = new System.Drawing.Point(9, 412);
-            this.feedSecondClick.Margin = new System.Windows.Forms.Padding(2);
+            this.feedSecondClick.Location = new System.Drawing.Point(12, 507);
+            this.feedSecondClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedSecondClick.Name = "feedSecondClick";
-            this.feedSecondClick.Size = new System.Drawing.Size(109, 37);
+            this.feedSecondClick.Size = new System.Drawing.Size(145, 46);
             this.feedSecondClick.TabIndex = 15;
             this.feedSecondClick.Text = "Feed";
             this.feedSecondClick.UseVisualStyleBackColor = true;
@@ -190,52 +188,42 @@
             // 
             // foodPictureBox
             // 
-            this.foodPictureBox.Location = new System.Drawing.Point(56, 141);
-            this.foodPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.foodPictureBox.Location = new System.Drawing.Point(75, 174);
+            this.foodPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foodPictureBox.Name = "foodPictureBox";
-            this.foodPictureBox.Size = new System.Drawing.Size(105, 108);
+            this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
             this.foodPictureBox.TabIndex = 11;
             this.foodPictureBox.TabStop = false;
             // 
             // heartPicture
             // 
-            this.heartPicture.Location = new System.Drawing.Point(353, 141);
-            this.heartPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.heartPicture.Location = new System.Drawing.Point(471, 174);
+            this.heartPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.heartPicture.Name = "heartPicture";
-            this.heartPicture.Size = new System.Drawing.Size(105, 108);
+            this.heartPicture.Size = new System.Drawing.Size(140, 133);
             this.heartPicture.TabIndex = 10;
             this.heartPicture.TabStop = false;
             // 
             // petPicture
             // 
             this.petPicture.Image = global::Main.Properties.Resources.hamsterfeed2;
-            this.petPicture.Location = new System.Drawing.Point(185, 210);
-            this.petPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.petPicture.Location = new System.Drawing.Point(247, 258);
+            this.petPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.petPicture.Name = "petPicture";
-            this.petPicture.Size = new System.Drawing.Size(141, 148);
+            this.petPicture.Size = new System.Drawing.Size(188, 182);
             this.petPicture.TabIndex = 9;
             this.petPicture.TabStop = false;
             // 
             // energyTimer
             // 
-            this.energyTimer.Interval = 3600000;
+            this.energyTimer.Interval = 7200000;
             this.energyTimer.Tick += new System.EventHandler(this.energyTimer_Tick);
-            // 
-            // hygeneTimer
-            // 
-            this.hygeneTimer.Interval = 3600000;
-            this.hygeneTimer.Tick += new System.EventHandler(this.hygeneTimer_Tick);
-            // 
-            // hungerTimer
-            // 
-            this.hungerTimer.Interval = 3600000;
-            this.hungerTimer.Tick += new System.EventHandler(this.hungerTimer_Tick);
             // 
             // MainGameUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 458);
+            this.ClientSize = new System.Drawing.Size(693, 564);
             this.Controls.Add(this.feedSecondClick);
             this.Controls.Add(this.appleButton);
             this.Controls.Add(this.bananaButton);
@@ -252,7 +240,7 @@
             this.Controls.Add(this.tirednessBar);
             this.Controls.Add(this.hungerBar);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainGameUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
@@ -283,7 +271,5 @@
         private System.Windows.Forms.Button appleButton;
         private System.Windows.Forms.Button feedSecondClick;
         private System.Windows.Forms.Timer energyTimer;
-        private System.Windows.Forms.Timer hygeneTimer;
-        private System.Windows.Forms.Timer hungerTimer;
     }
 }

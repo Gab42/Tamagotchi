@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Main
@@ -51,8 +43,6 @@ namespace Main
             this.Show();
         }
 
-        //TODO Load game.
-
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Exit.
@@ -60,14 +50,14 @@ namespace Main
 
         private void loadGameButton_Click(object sender, EventArgs e)
         {
-            //Load game from saveGame.txt.
+            // Load game from saveGame.txt.
             bool saveFileExists = Pet.LoadGame();
             if (!saveFileExists)
             {
                 MessageBox.Show("No save file found! Starting new game...");
             }
 
-            //Show main game window.
+            // Show main game window.
             MainGameUI mainGameUI = new MainGameUI();
             this.Hide();
             mainGameUI.ShowDialog();

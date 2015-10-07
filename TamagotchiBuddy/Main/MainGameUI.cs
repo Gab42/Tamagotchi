@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Media;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Main
@@ -24,6 +16,8 @@ namespace Main
             tirednessBar.Value = Pet.Tiredness;
             hygeneBar.Value = Pet.Hygene;
             funBar.Value = Pet.Fun;
+
+            energyTimer.Start();
         }
 
         // Happy animation.
@@ -67,6 +61,7 @@ namespace Main
         // Exit.
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
+            energyTimer.Stop();
             Pet.SaveGame();
             Pet.Hunger = 3;
             Pet.Hygene = 3;
@@ -188,6 +183,7 @@ namespace Main
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.sleep;
                 heartPicture.Refresh();
+
                 DisableAllButtons();
                 feedButton.Enabled = false;
                 sleepButton.Enabled = true;
@@ -209,7 +205,6 @@ namespace Main
         // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
-
             if (Pet.Hygene < hygeneBar.Maximum)
             {
                 DisableAllButtons();
@@ -262,9 +257,8 @@ namespace Main
                 funBar.Value = Pet.Fun;
             }
         }
+
         //Stat decay timers
-        
-        //Tirednes(Energy)
         private void energyTimer_Tick(object sender, EventArgs e)
         {
             if (Pet.Tiredness >= 1 && Pet.SleepFlag == false)
@@ -273,33 +267,31 @@ namespace Main
             }
             else
             {
-                if (Pet.Tiredness < 6)
+                if (Pet.Tiredness < 6 && Pet.SleepFlag == true)
                 {
                     Pet.Tiredness++;
                 }
             }
-        }
-        //Hygene
-        private void hygeneTimer_Tick(object sender, EventArgs e)
-        {
+
             if (Pet.Hygene >= 1)
             {
                 Pet.Hygene--;
             }
-            
-        }
-        //Hunger
-        private void hungerTimer_Tick(object sender, EventArgs e)
-        {
+
             if (Pet.Hunger >= 1)
             {
                 Pet.Hunger--;
             }
+
             if (Pet.Fun >= 1)
             {
                 Pet.Fun--;
             }
-        }
 
+            hungerBar.Value = Pet.Hunger;
+            tirednessBar.Value = Pet.Tiredness;
+            hygeneBar.Value = Pet.Hygene;
+            funBar.Value = Pet.Fun;
+        }
     }
 }

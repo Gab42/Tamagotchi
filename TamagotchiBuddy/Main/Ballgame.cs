@@ -8,13 +8,11 @@ namespace Main
     {
         Bitmap Backbuffer;
         Timer GameTimer = new Timer();
-        // david's code
         const int BallAxisSpeed = 4;
         int score = 0;
         Point BallPos = new Point(100, 100);
         Point BallSpeed = new Point(BallAxisSpeed, BallAxisSpeed);
         const int BallSize = 20;
-        // end of david's code 
 
         public Ballgame()
         {
@@ -24,16 +22,14 @@ namespace Main
             ControlStyles.UserPaint |
             ControlStyles.AllPaintingInWmPaint |
             ControlStyles.DoubleBuffer, true);
-            
-            
+                      
             GameTimer.Interval = 10;
             GameTimer.Tick += new EventHandler(GameTimer_Tick);
             GameTimer.Start();
             
             this.ResizeEnd += new EventHandler(Form1_CreateBackBuffer);
             this.Load += new EventHandler(Form1_CreateBackBuffer);
-            this.Paint += new PaintEventHandler(Form1_Paint);
-            
+            this.Paint += new PaintEventHandler(Form1_Paint);            
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
         }
 
@@ -60,8 +56,9 @@ namespace Main
         void Form1_CreateBackBuffer(object sender, EventArgs e)
         {
             if (Backbuffer != null)
+            {
                 Backbuffer.Dispose();
-
+            }
             Backbuffer = new Bitmap(ClientSize.Width, ClientSize.Height);
         }
 
@@ -74,20 +71,16 @@ namespace Main
                     g.Clear(Color.White);
                     g.FillEllipse(Brushes.PaleVioletRed, BallPos.X - BallSize / 2, BallPos.Y - BallSize / 2, BallSize, BallSize);
                 }
-
                 Invalidate();
             }
-
         }
-        // David's code
         
         bool HitLeft()
         {
             if(BallPos.X <= 9)
             {
                 return true;
-            }
-            
+            }            
             return false;
         }
         bool HitRight()
@@ -96,7 +89,6 @@ namespace Main
             {
                 return true;
             }
-
             return false;
         }
         bool HitUp()
@@ -105,7 +97,6 @@ namespace Main
             {
                 return true;
             }
-
             return false;
         }
         bool dead()
@@ -141,11 +132,13 @@ namespace Main
             {
                 GameTimer.Stop();
                 MessageBox.Show("GAME OVER!!!");
+                if (score > 10 && Pet.Fun < 6)
+                {
+                    Pet.Fun += 1;
+                }
                 this.Close();
             }
             Score.Text = "Score: " + score.ToString();
-        }
-        // end of David's code
-       
+        }      
     }
 }
