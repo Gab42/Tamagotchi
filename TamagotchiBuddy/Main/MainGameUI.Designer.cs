@@ -217,10 +217,12 @@
             this.Controls.Add(this.hygeneBar);
             this.Controls.Add(this.tirednessBar);
             this.Controls.Add(this.hungerBar);
+            this.KeyPreview = true;
             this.Name = "MainGameUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainGameUI_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainGameUI_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.foodPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heartPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petPicture)).EndInit();

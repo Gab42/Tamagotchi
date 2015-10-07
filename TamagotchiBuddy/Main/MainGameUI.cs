@@ -69,7 +69,15 @@ namespace Main
         private void MainGameUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             Pet.SaveGame();
-            Application.Exit();
+        }
+
+        // Quit with Esc key.
+        private void MainGameUI_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.ToString() == "27")
+            {
+                this.Close();
+            }
         }
 
         // Feeding.
@@ -250,6 +258,6 @@ namespace Main
                 PetHappy();
                 funBar.Value = Pet.Fun;
             }
-        }     
+        }
     }
 }

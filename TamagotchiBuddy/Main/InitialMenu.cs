@@ -18,24 +18,36 @@ namespace Main
             InitializeComponent();
         }
 
-        // Exit.
-        private void quitButton_Click(object sender, EventArgs e)
+        private void Quit()
         {
             DialogResult result1 = MessageBox.Show("Do you really want to exit the game?", "Exit?", MessageBoxButtons.YesNo);
             if (result1 == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
+            }
+        }
+
+        // Exit.
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            Quit();
+        }
+
+        // Quit with Esc key.
+        private void InitialMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.ToString() == "27")
+            {
+                Quit();
             }
         }
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
             MainGameUI mainGameUI = new MainGameUI();
-            mainGameUI.Left = this.Left;
-            mainGameUI.Top = this.Top;
-            mainGameUI.Size = this.Size;          
-            mainGameUI.Show();
             this.Hide();
+            mainGameUI.ShowDialog();
+            this.Show();
         }
 
         //TODO Load game.
@@ -43,8 +55,6 @@ namespace Main
         private void InitialMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Exit.
-            Pet.SaveGame();
-            Application.Exit();
         }
 
         private void loadGameButton_Click(object sender, EventArgs e)
@@ -57,11 +67,9 @@ namespace Main
             }
             //Show main game window.
             MainGameUI mainGameUI = new MainGameUI();
-            mainGameUI.Left = this.Left;
-            mainGameUI.Top = this.Top;
-            mainGameUI.Size = this.Size;
-            mainGameUI.Show();
             this.Hide();
+            mainGameUI.ShowDialog();
+            this.Show();
         }
     }
 }

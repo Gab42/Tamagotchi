@@ -86,11 +86,13 @@
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.loadGameButton);
             this.Controls.Add(this.newGameButton);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InitialMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tamagotchi Buddy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InitialMenu_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InitialMenu_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

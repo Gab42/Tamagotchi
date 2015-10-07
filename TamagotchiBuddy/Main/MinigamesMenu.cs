@@ -47,5 +47,13 @@ namespace Main
             matchTwoGame.StartPosition = FormStartPosition.CenterParent;
             matchTwoGame.ShowDialog();   
         }
+
+        private void MinigamesMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.ToString() == "27")
+            {
+                this.Close();
+            }
+        }
     }
 }
