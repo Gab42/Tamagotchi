@@ -52,6 +52,7 @@
             // 
             // hungerBar
             // 
+            this.hungerBar.BackColor = System.Drawing.Color.Silver;
             this.hungerBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.hungerBar.Location = new System.Drawing.Point(12, 12);
             this.hungerBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -63,6 +64,7 @@
             // 
             // tirednessBar
             // 
+            this.tirednessBar.BackColor = System.Drawing.Color.Silver;
             this.tirednessBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tirednessBar.Location = new System.Drawing.Point(189, 12);
             this.tirednessBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -74,7 +76,8 @@
             // 
             // funBar
             // 
-            this.funBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.funBar.BackColor = System.Drawing.Color.Silver;
+            this.funBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.funBar.Location = new System.Drawing.Point(544, 12);
             this.funBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.funBar.Maximum = 6;
@@ -85,7 +88,8 @@
             // 
             // hygeneBar
             // 
-            this.hygeneBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.hygeneBar.BackColor = System.Drawing.Color.Silver;
+            this.hygeneBar.ForeColor = System.Drawing.Color.White;
             this.hygeneBar.Location = new System.Drawing.Point(367, 12);
             this.hygeneBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hygeneBar.Maximum = 6;
@@ -96,17 +100,19 @@
             // 
             // feedButton
             // 
+            this.feedButton.BackColor = System.Drawing.Color.Silver;
             this.feedButton.Location = new System.Drawing.Point(12, 507);
             this.feedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedButton.Name = "feedButton";
             this.feedButton.Size = new System.Drawing.Size(145, 46);
             this.feedButton.TabIndex = 5;
             this.feedButton.Text = "Feed";
-            this.feedButton.UseVisualStyleBackColor = true;
+            this.feedButton.UseVisualStyleBackColor = false;
             this.feedButton.Click += new System.EventHandler(this.feedButton_Click);
             // 
             // sleepButton
             // 
+            this.sleepButton.BackColor = System.Drawing.Color.Silver;
             this.sleepButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.sleepButton.Location = new System.Drawing.Point(189, 507);
             this.sleepButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,11 +120,12 @@
             this.sleepButton.Size = new System.Drawing.Size(145, 46);
             this.sleepButton.TabIndex = 6;
             this.sleepButton.Text = "Lights Off";
-            this.sleepButton.UseVisualStyleBackColor = true;
+            this.sleepButton.UseVisualStyleBackColor = false;
             this.sleepButton.Click += new System.EventHandler(this.sleepButton_Click);
             // 
             // cleanButton
             // 
+            this.cleanButton.BackColor = System.Drawing.Color.Silver;
             this.cleanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cleanButton.Location = new System.Drawing.Point(367, 507);
             this.cleanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -126,11 +133,12 @@
             this.cleanButton.Size = new System.Drawing.Size(145, 46);
             this.cleanButton.TabIndex = 7;
             this.cleanButton.Text = "Clean";
-            this.cleanButton.UseVisualStyleBackColor = true;
+            this.cleanButton.UseVisualStyleBackColor = false;
             this.cleanButton.Click += new System.EventHandler(this.cleanButton_Click);
             // 
             // playButton
             // 
+            this.playButton.BackColor = System.Drawing.Color.Silver;
             this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.playButton.Location = new System.Drawing.Point(544, 507);
             this.playButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -138,11 +146,12 @@
             this.playButton.Size = new System.Drawing.Size(145, 46);
             this.playButton.TabIndex = 8;
             this.playButton.Text = "Play";
-            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // cherryButton
             // 
+            this.cherryButton.BackColor = System.Drawing.Color.Silver;
             this.cherryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cherryButton.Location = new System.Drawing.Point(12, 455);
             this.cherryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,12 +159,13 @@
             this.cherryButton.Size = new System.Drawing.Size(145, 46);
             this.cherryButton.TabIndex = 12;
             this.cherryButton.Text = "Cherry";
-            this.cherryButton.UseVisualStyleBackColor = true;
+            this.cherryButton.UseVisualStyleBackColor = false;
             this.cherryButton.Visible = false;
             this.cherryButton.Click += new System.EventHandler(this.cherryButton_Click);
             // 
             // bananaButton
             // 
+            this.bananaButton.BackColor = System.Drawing.Color.Silver;
             this.bananaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.bananaButton.Location = new System.Drawing.Point(12, 405);
             this.bananaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -163,12 +173,13 @@
             this.bananaButton.Size = new System.Drawing.Size(145, 46);
             this.bananaButton.TabIndex = 13;
             this.bananaButton.Text = "Banana";
-            this.bananaButton.UseVisualStyleBackColor = true;
+            this.bananaButton.UseVisualStyleBackColor = false;
             this.bananaButton.Visible = false;
             this.bananaButton.Click += new System.EventHandler(this.bananaButton_Click);
             // 
             // appleButton
             // 
+            this.appleButton.BackColor = System.Drawing.Color.Silver;
             this.appleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.appleButton.Location = new System.Drawing.Point(12, 354);
             this.appleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,12 +187,13 @@
             this.appleButton.Size = new System.Drawing.Size(145, 46);
             this.appleButton.TabIndex = 14;
             this.appleButton.Text = "Apple";
-            this.appleButton.UseVisualStyleBackColor = true;
+            this.appleButton.UseVisualStyleBackColor = false;
             this.appleButton.Visible = false;
             this.appleButton.Click += new System.EventHandler(this.appleButton_Click);
             // 
             // feedSecondClick
             // 
+            this.feedSecondClick.BackColor = System.Drawing.Color.Silver;
             this.feedSecondClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.feedSecondClick.Location = new System.Drawing.Point(12, 507);
             this.feedSecondClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -189,7 +201,7 @@
             this.feedSecondClick.Size = new System.Drawing.Size(145, 46);
             this.feedSecondClick.TabIndex = 15;
             this.feedSecondClick.Text = "Feed";
-            this.feedSecondClick.UseVisualStyleBackColor = true;
+            this.feedSecondClick.UseVisualStyleBackColor = false;
             this.feedSecondClick.Visible = false;
             this.feedSecondClick.Click += new System.EventHandler(this.feedSecondClick_Click);
             // 
@@ -230,6 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(693, 564);
             this.Controls.Add(this.feedSecondClick);
             this.Controls.Add(this.appleButton);

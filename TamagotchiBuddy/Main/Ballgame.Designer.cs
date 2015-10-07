@@ -35,21 +35,22 @@
             // 
             this.Score.BackColor = System.Drawing.Color.Chartreuse;
             this.Score.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Score.Location = new System.Drawing.Point(-1, 270);
+            this.Score.Location = new System.Drawing.Point(-1, 332);
+            this.Score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Score.Name = "Score";
-            this.Score.Size = new System.Drawing.Size(284, 20);
+            this.Score.Size = new System.Drawing.Size(379, 25);
             this.Score.TabIndex = 0;
             this.Score.Text = "SCORE :";
             this.Score.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            
             // 
-            // Form1
+            // Ballgame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 288);
+            this.ClientSize = new System.Drawing.Size(379, 354);
             this.Controls.Add(this.Score);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Ballgame";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
