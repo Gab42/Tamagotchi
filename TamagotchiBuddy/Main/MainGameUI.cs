@@ -230,7 +230,7 @@ namespace Main
                     Thread.Sleep(500);
                 }
 
-                Pet.Hygene += 1;
+                Pet.Hygene = hygeneBar.Maximum;
                 hygeneBar.Value = Pet.Hygene;
 
                 PetHappy();
