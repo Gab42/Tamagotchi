@@ -100,8 +100,11 @@ namespace Main
                 button11.Text = "";
             }
             buttonPressed = false;
+           
+            
             
         }
+       
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -217,6 +220,7 @@ namespace Main
             if (button8.Text != "Team Infers" && buttonPressed)
             {
                 timer1.Start();
+                buttonPressed = false;
             }
             if (buttonPressed == false)
             {
@@ -232,6 +236,7 @@ namespace Main
             if (button6.Text != "Team Infers" && buttonPressed)
             {
                 timer1.Start();
+                buttonPressed = false;
             }
             if (buttonPressed == false)
             {
@@ -247,6 +252,7 @@ namespace Main
             if (button11.Text != "Team work" && buttonPressed)
             {
                 timer1.Start();
+                buttonPressed = false;
             }
             if (buttonPressed == false)
             {
@@ -262,6 +268,7 @@ namespace Main
             if (button9.Text != "Team work" && buttonPressed)
             {
                 timer1.Start();
+                buttonPressed = false;
             }
             if (buttonPressed == false)
             {

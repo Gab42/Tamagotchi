@@ -179,7 +179,7 @@ namespace Main
             this.playagain.UseVisualStyleBackColor = true;
             this.playagain.Click += new System.EventHandler(this.PlayagainClick);
             // 
-            // Form1
+            // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,8 +199,8 @@ namespace Main
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Tic Tac Toe by Anoop";
+            this.Name = "TicTacToe";
+            this.Text = "Tic Tac Toe";
             this.ResumeLayout(false);
 
         }
