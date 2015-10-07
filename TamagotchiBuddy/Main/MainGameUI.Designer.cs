@@ -107,6 +107,7 @@
             // 
             // sleepButton
             // 
+            this.sleepButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.sleepButton.Location = new System.Drawing.Point(189, 507);
             this.sleepButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sleepButton.Name = "sleepButton";
@@ -118,6 +119,7 @@
             // 
             // cleanButton
             // 
+            this.cleanButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cleanButton.Location = new System.Drawing.Point(367, 507);
             this.cleanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cleanButton.Name = "cleanButton";
@@ -129,6 +131,7 @@
             // 
             // playButton
             // 
+            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.playButton.Location = new System.Drawing.Point(544, 507);
             this.playButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.playButton.Name = "playButton";
@@ -140,6 +143,7 @@
             // 
             // cherryButton
             // 
+            this.cherryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cherryButton.Location = new System.Drawing.Point(12, 455);
             this.cherryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cherryButton.Name = "cherryButton";
@@ -152,6 +156,7 @@
             // 
             // bananaButton
             // 
+            this.bananaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.bananaButton.Location = new System.Drawing.Point(12, 405);
             this.bananaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bananaButton.Name = "bananaButton";
@@ -164,6 +169,7 @@
             // 
             // appleButton
             // 
+            this.appleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.appleButton.Location = new System.Drawing.Point(12, 354);
             this.appleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.appleButton.Name = "appleButton";
@@ -176,6 +182,7 @@
             // 
             // feedSecondClick
             // 
+            this.feedSecondClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.feedSecondClick.Location = new System.Drawing.Point(12, 507);
             this.feedSecondClick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedSecondClick.Name = "feedSecondClick";

@@ -37,6 +37,7 @@
             // 
             // newGameButton
             // 
+            this.newGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.newGameButton.Location = new System.Drawing.Point(221, 340);
             this.newGameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newGameButton.Name = "newGameButton";
@@ -48,6 +49,7 @@
             // 
             // loadGameButton
             // 
+            this.loadGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.loadGameButton.Location = new System.Drawing.Point(221, 394);
             this.loadGameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loadGameButton.Name = "loadGameButton";
@@ -59,6 +61,7 @@
             // 
             // quitButton
             // 
+            this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.quitButton.Location = new System.Drawing.Point(221, 448);
             this.quitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quitButton.Name = "quitButton";
@@ -71,7 +74,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Main.Properties.Resources.hamsterfeed1;
-            this.pictureBox1.Location = new System.Drawing.Point(230, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(230, 119);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 184);
             this.pictureBox1.TabIndex = 3;

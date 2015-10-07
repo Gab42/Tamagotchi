@@ -36,6 +36,7 @@
             // 
             // minigameButton1
             // 
+            this.minigameButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.minigameButton1.Location = new System.Drawing.Point(35, 52);
             this.minigameButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minigameButton1.Name = "minigameButton1";
@@ -47,6 +48,7 @@
             // 
             // minigameButton4
             // 
+            this.minigameButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.minigameButton4.Location = new System.Drawing.Point(35, 126);
             this.minigameButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minigameButton4.Name = "minigameButton4";
@@ -58,6 +60,7 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cancelButton.Location = new System.Drawing.Point(35, 224);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton.Name = "cancelButton";
@@ -69,6 +72,7 @@
             // 
             // minigameButton5
             // 
+            this.minigameButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.minigameButton5.Location = new System.Drawing.Point(35, 89);
             this.minigameButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minigameButton5.Name = "minigameButton5";
