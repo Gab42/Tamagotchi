@@ -63,10 +63,6 @@ namespace Main
         {
             energyTimer.Stop();
             Pet.SaveGame();
-            Pet.Hunger = 3;
-            Pet.Hygene = 3;
-            Pet.Tiredness = 3;
-            Pet.Fun = 3;
         }
 
         // Quit with Esc key.

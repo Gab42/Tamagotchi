@@ -55,6 +55,7 @@ namespace Main
             if (!saveFileExists)
             {
                 MessageBox.Show("No save file found! Starting new game...");
+                Pet.NewGame();
             }
 
             // Show main game window.

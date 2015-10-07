@@ -13,7 +13,6 @@ namespace Main
         static private int hygene;
         static private int fun;        
         static private bool sleepFlag;
-        //static public int gamesPlayed = 0;
         static private DateTime lastPlayed = DateTime.Now;
 
         static public void NewGame()
@@ -25,11 +24,12 @@ namespace Main
             Pet.SleepFlag = false;
         }
 
+        // Load game.
         static public bool LoadGame()
         {
-            if (File.Exists("../../saveGame.txt"))
+            if (File.Exists("saveGame.txt"))
             {              
-                string[] saveData = File.ReadAllLines("../../saveGame.txt");
+                string[] saveData = File.ReadAllLines("saveGame.txt");
                 var timePeriod = Convert.ToInt32((DateTime.Now - DateTime.Parse(saveData[5])).TotalHours)/2;
                 Pet.SleepFlag = bool.Parse(saveData[4]);               
                 Pet.Hunger = int.Parse(saveData[0]) - timePeriod;
@@ -65,6 +65,7 @@ namespace Main
                         Pet.Tiredness = 0;
                     }
                 }
+                Pet.SleepFlag = false;
                 return true;             
             }
             else
@@ -73,10 +74,11 @@ namespace Main
             }
         }
 
+        // Save game.
         static public void SaveGame()
         {
             lastPlayed = DateTime.Now;//Last played
-            var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
+            var fileStream = new FileStream("saveGame.txt", FileMode.Create);
             try
             {
                 byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.SleepFlag + Environment.NewLine + Pet.lastPlayed);
