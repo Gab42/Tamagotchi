@@ -44,7 +44,8 @@ namespace Main
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
-            MainGameUI mainGameUI = new MainGameUI();
+            Pet.NewGame();
+            MainGameUI mainGameUI = new MainGameUI();            
             this.Hide();
             mainGameUI.ShowDialog();
             this.Show();
@@ -65,6 +66,7 @@ namespace Main
             {
                 MessageBox.Show("No save file found! Starting new game...");
             }
+
             //Show main game window.
             MainGameUI mainGameUI = new MainGameUI();
             this.Hide();

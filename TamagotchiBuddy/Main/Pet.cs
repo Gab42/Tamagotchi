@@ -10,36 +10,72 @@ namespace Main
     static class Pet
     {
         // Stats.
-        static private int hunger = 3;
-        static private int tiredness = 3;
-        static private int hygene = 3;
-        static private int fun = 3;
+        static private int hunger;
+        static private int tiredness;
+        static private int hygene;
+        static private int fun;        
+        static private bool sleepFlag;
         static public int gamesPlayed = 0;
-        static private bool sleepFlag = false;
         static private DateTime lastPlayed = DateTime.Now;
+
+        static public void NewGame()
+        {
+            Pet.Hunger = 3;
+            Pet.Tiredness = 3;
+            Pet.Hygene = 3;
+            Pet.Fun = 3;
+            Pet.SleepFlag = false;
+        }
 
         static public bool LoadGame()
         {
             if (File.Exists("../../saveGame.txt"))
-            {
+            {              
                 string[] saveData = File.ReadAllLines("../../saveGame.txt");
-                Pet.Hunger = int.Parse(saveData[0]);
-                Pet.Tiredness = int.Parse(saveData[1]);
-                Pet.Hygene = int.Parse(saveData[2]);
-                Pet.Fun = int.Parse(saveData[3]);
-                Pet.gamesPlayed = int.Parse(saveData[4]);
-                Pet.SleepFlag = bool.Parse(saveData[5]);
-                TimeSpan timePassed = DateTime.Now - lastPlayed;
-                // int a = int.Parse(timePassed.Hours.ToString());
+                var timePeriod = Convert.ToInt32((DateTime.Now - DateTime.Parse(saveData[6])).TotalHours)/2;
+                Pet.gamesPlayed = 0;
+                Pet.SleepFlag = bool.Parse(saveData[5]);               
+                Pet.Hunger = int.Parse(saveData[0]) - timePeriod;
+                Pet.Hygene = int.Parse(saveData[2]) - timePeriod;
+                Pet.Fun = int.Parse(saveData[3]) - timePeriod;
 
-                
-                return true;
+                if (Pet.Hunger < 0)
+                {
+                    Pet.Hunger = 0;
+                }
+                if (Pet.Hygene < 0)
+                {
+                    Pet.Hygene = 0;
+                }
+                if (Pet.Fun < 0)
+                {
+                    Pet.Fun = 0;
+                }
+
+                if (SleepFlag)
+                {
+                    Pet.Tiredness = int.Parse(saveData[1]) + timePeriod;
+                    if (Pet.Tiredness > 6)
+                    {
+                        Pet.Tiredness = 6;
+                    }
+                }
+                else
+                {
+                    Pet.Tiredness = int.Parse(saveData[1]) - timePeriod;
+                    if (Pet.Tiredness < 0)
+                    {
+                        Pet.Tiredness = 0;
+                    }
+                }
+                return true;             
             }
             else
             {
                 return false;
             }
         }
+
         static public void SaveGame()
         {
             lastPlayed = DateTime.Now;//Last played

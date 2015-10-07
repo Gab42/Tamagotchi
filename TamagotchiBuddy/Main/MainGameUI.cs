@@ -24,7 +24,6 @@ namespace Main
             tirednessBar.Value = Pet.Tiredness;
             hygeneBar.Value = Pet.Hygene;
             funBar.Value = Pet.Fun;
-            Pet.SleepFlag = false;
         }
 
         // Happy animation.
@@ -296,6 +295,11 @@ namespace Main
             {
                 Pet.Hunger--;
             }
+            if (Pet.Fun >= 1)
+            {
+                Pet.Fun--;
+            }
         }
+
     }
 }
