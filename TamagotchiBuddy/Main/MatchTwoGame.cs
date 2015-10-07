@@ -231,6 +231,7 @@ namespace Main
             {
                 MessageBox.Show("You have won!");
                 Pet.Fun += 1;
+                Close();
             }
             else
             {
