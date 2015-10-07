@@ -198,9 +198,10 @@ namespace Main
         // Cleaning.
         private void cleanButton_Click(object sender, EventArgs e)
         {
-            DisableAllButtons();
+            
             if (Pet.Hygene < hygeneBar.Maximum)
-            {                       
+            {
+                DisableAllButtons();
                 petPicture.Image = Properties.Resources.hamsterclean;
                 petPicture.Refresh();
                 heartPicture.Image = Properties.Resources.brush;
