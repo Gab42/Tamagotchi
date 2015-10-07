@@ -17,6 +17,8 @@ namespace Main
             InitializeComponent();
         }
 
+        bool buttonPressed = false;
+
         private void MatchTwoGame_Load(object sender, EventArgs e)
         {
             button1.Text = "";
@@ -30,45 +32,11 @@ namespace Main
             button9.Text = "";
             button10.Text = "";
             button11.Text = "";
-            button12.Text = "";
-            
-            
-        }
-        
-        bool buttonPressed = false;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button1.Text = "SoftUni";
-            
-            if (button7.Text!="SoftUni" && buttonPressed)
-            {
-               
-                timer1.Start();
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-            
-
-
+            button12.Text = "";         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //button1.Text = " ";
-            //button2.Text = " ";
-            //button3.Text = " ";
-            //button4.Text = " ";
-            //button5.Text = " ";
-            //button6.Text = " ";
-            //button7.Text = " ";
-            //button8.Text = " ";
-            //button9.Text = " ";
-            //button10.Text = " ";
-            //button11.Text = " ";
-            //button12.Text = " ";
             if (button1.Text != button7.Text)
             {
                 button1.Text = "";
@@ -99,27 +67,19 @@ namespace Main
                 button9.Text = "";
                 button11.Text = "";
             }
-            buttonPressed = false;
-           
-            
-            
         }
        
-
-        private void button7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            button7.Text = "SoftUni";
-
-            if (button1.Text != "SoftUni" && buttonPressed)
+            button1.Text = "SoftUni";
+            
+            if (button7.Text!="SoftUni" && buttonPressed)
             {
                
                 timer1.Start();
             }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
+            buttonPressed = !buttonPressed;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -131,25 +91,7 @@ namespace Main
             {
                 timer1.Start();
             }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button10.Text = "Nakov";
-
-            if (button2.Text != "Nakov" && buttonPressed)
-            {
-                timer1.Start();
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
+            buttonPressed = !buttonPressed;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -161,25 +103,7 @@ namespace Main
             {
                 timer1.Start();
             }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button5.Text = "Dancho";
-
-            if (button3.Text != "Dancho" && buttonPressed)
-            {
-                timer1.Start();
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
+            buttonPressed = !buttonPressed;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -191,10 +115,92 @@ namespace Main
             {
                 timer1.Start();
             }
-            if (buttonPressed == false)
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button5.Text = "Dancho";
+
+            if (button3.Text != "Dancho" && buttonPressed)
             {
-                buttonPressed = true;
+                timer1.Start();
             }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button6.Text = "Team Infers";
+
+            if (button8.Text != "Team Infers" && buttonPressed)
+            {
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button7.Text = "SoftUni";
+
+            if (button1.Text != "SoftUni" && buttonPressed)
+            {
+               
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button8.Text = "Team Infers";
+
+            if (button6.Text != "Team Infers" && buttonPressed)
+            {
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button9.Text = "Team work";
+
+            if (button11.Text != "Team work" && buttonPressed)
+            {
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button10.Text = "Nakov";
+
+            if (button2.Text != "Nakov" && buttonPressed)
+            {
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            button11.Text = "Team work";
+
+            if (button9.Text != "Team work" && buttonPressed)
+            {
+                timer1.Start();
+            }
+            buttonPressed = !buttonPressed;
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -206,74 +212,7 @@ namespace Main
             {
                 timer1.Start();
             }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button6.Text = "Team Infers";
-
-            if (button8.Text != "Team Infers" && buttonPressed)
-            {
-                timer1.Start();
-                buttonPressed = false;
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button8.Text = "Team Infers";
-
-            if (button6.Text != "Team Infers" && buttonPressed)
-            {
-                timer1.Start();
-                buttonPressed = false;
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button9.Text = "Team work";
-
-            if (button11.Text != "Team work" && buttonPressed)
-            {
-                timer1.Start();
-                buttonPressed = false;
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            button11.Text = "Team work";
-
-            if (button9.Text != "Team work" && buttonPressed)
-            {
-                timer1.Start();
-                buttonPressed = false;
-            }
-            if (buttonPressed == false)
-            {
-                buttonPressed = true;
-            }
+            buttonPressed = !buttonPressed;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -291,7 +230,7 @@ namespace Main
             if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button6.Text != "" && button9.Text != "")
             {
                 MessageBox.Show("You have won!");
-
+                Pet.Fun += 1;
             }
             else
             {
