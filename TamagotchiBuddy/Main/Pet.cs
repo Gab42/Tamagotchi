@@ -16,6 +16,7 @@ namespace Main
         static private int fun = 3;
         static public int gamesPlayed = 0;
         static private bool sleepFlag = false;
+        static private DateTime lastPlayed = DateTime.Now;
 
         static public bool LoadGame()
         {
@@ -28,6 +29,10 @@ namespace Main
                 Pet.Fun = int.Parse(saveData[3]);
                 Pet.gamesPlayed = int.Parse(saveData[4]);
                 Pet.SleepFlag = bool.Parse(saveData[5]);
+                TimeSpan timePassed = DateTime.Now - lastPlayed;
+                // int a = int.Parse(timePassed.Hours.ToString());
+
+                
                 return true;
             }
             else
@@ -37,10 +42,11 @@ namespace Main
         }
         static public void SaveGame()
         {
+            lastPlayed = DateTime.Now;//Last played
             var fileStream = new FileStream("../../saveGame.txt", FileMode.Create);
             try
             {
-                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag);
+                byte[] bytes = Encoding.UTF8.GetBytes(Pet.Hunger + Environment.NewLine + Pet.Tiredness + Environment.NewLine + Pet.Hygene + Environment.NewLine + Pet.Fun + Environment.NewLine + Pet.gamesPlayed + Environment.NewLine + Pet.SleepFlag + Environment.NewLine + Pet.lastPlayed);
                 fileStream.Write(bytes, 0, bytes.Length);
             }
             finally
