@@ -14,11 +14,153 @@ namespace Main
         public TicTacToe()
         {
             InitializeComponent();
+            
         }
         int turn = 1;
         int click1 = 0, click2 = 0, click3 = 0, click4 = 0, click5 = 0, click6 = 0, click7 = 0, click8 = 0, click9 = 0;
         int player1 = 0, player2 = 0;
+        Random num = new Random();
 
+        void AiMoves()
+        {
+            
+            int number = num.Next(1, 9);
+            if (button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "" )
+            {
+                return;
+            }
+            switch (number)
+
+            {
+                
+                    case 1:
+                    if(button1.Text == "")
+                    {
+                        button1.Text = "O";
+                        click1++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 2:
+                    if (button2.Text == "")
+                    {
+                        button2.Text = "O";
+                        click2++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 3:
+                    if (button3.Text == "")
+                    {
+                        button3.Text = "O";
+                        click3++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 4:
+                    if (button4.Text == "")
+                    {
+                        button4.Text = "O";
+                        click4++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 5:
+                    if (button5.Text == "")
+                    {
+                        button5.Text = "O";
+                        click5++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 6:
+                    if (button6.Text == "")
+                    {
+                        button6.Text = "O";
+                        click6++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 7:
+                    if (button7.Text == "")
+                    {
+                        button7.Text = "O";
+                        click7++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 8:
+                    if (button8.Text == "")
+                    {
+                        button8.Text = "O";
+                        click8++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+                case 9:
+                    if (button9.Text == "")
+                    {
+                        button9.Text = "O";
+                        click9++;
+                        turn++;
+                        display();
+                        checkit();
+                    }
+                    else
+                    {
+                        AiMoves();
+                    }
+                    break;
+            }
+        }
         void Button1Click(object sender, EventArgs e)
         {
             if (click1 == 0)
@@ -245,14 +387,18 @@ namespace Main
             if (turn % 2 != 0)
             {
                 displayturn.Text = "Player 1";
+                
             }
             else
             {
                 displayturn.Text = "Player 2";
+                AiMoves();
+                
             }
         }
         public void checkit()
         {
+           
             if (button1.Text != "" && button2.Text != "" && button3.Text != "")
             {
                 if (button1.Text == button2.Text && button1.Text == button3.Text)
