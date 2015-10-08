@@ -14,7 +14,7 @@ namespace Main
         static private int fun;        
         static private bool sleepFlag;
         static private DateTime lastPlayed = DateTime.Now;
-
+        //Set stats for new game.
         static public void NewGame()
         {
             Pet.Hunger = 3;
