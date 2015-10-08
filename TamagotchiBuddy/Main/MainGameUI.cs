@@ -170,8 +170,6 @@ namespace Main
         // Sleeping.
         private void sleepButton_Click(object sender, EventArgs e)
         {
-            //TODO - pet tiredness bar should start going up slowly.
-
             Pet.SleepFlag = !Pet.SleepFlag;
             if (Pet.SleepFlag)
             {
