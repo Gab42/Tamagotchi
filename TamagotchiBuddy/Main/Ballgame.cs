@@ -45,6 +45,7 @@ namespace Main
                 BallSpeed.Y = BallAxisSpeed;
         }
 
+
         void Form1_Paint(object sender, PaintEventArgs e)
         {
             if (Backbuffer != null)
@@ -62,6 +63,7 @@ namespace Main
             Backbuffer = new Bitmap(ClientSize.Width, ClientSize.Height);
         }
 
+        //balldraw
         void Draw()
         {
             if (Backbuffer != null)
@@ -74,7 +76,8 @@ namespace Main
                 Invalidate();
             }
         }
-        
+
+        //wallhit Methods
         bool HitLeft()
         {
             if(BallPos.X <= 9)
@@ -99,6 +102,7 @@ namespace Main
             }
             return false;
         }
+        // dying method
         bool dead()
         {
             if(BallPos.Y >= 280)
