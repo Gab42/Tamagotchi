@@ -212,6 +212,7 @@
             this.foodPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foodPictureBox.Name = "foodPictureBox";
             this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
+            this.foodPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.foodPictureBox.TabIndex = 11;
             this.foodPictureBox.TabStop = false;
             // 
@@ -221,6 +222,7 @@
             this.heartPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.heartPicture.Name = "heartPicture";
             this.heartPicture.Size = new System.Drawing.Size(140, 133);
+            this.heartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.heartPicture.TabIndex = 10;
             this.heartPicture.TabStop = false;
             // 
@@ -230,7 +232,8 @@
             this.petPicture.Location = new System.Drawing.Point(247, 258);
             this.petPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.petPicture.Name = "petPicture";
-            this.petPicture.Size = new System.Drawing.Size(188, 182);
+            this.petPicture.Size = new System.Drawing.Size(187, 180);
+            this.petPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.petPicture.TabIndex = 9;
             this.petPicture.TabStop = false;
             // 

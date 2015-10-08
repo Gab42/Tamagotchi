@@ -79,7 +79,8 @@
             this.pictureBox1.Image = global::Main.Properties.Resources.hamsterfeed1;
             this.pictureBox1.Location = new System.Drawing.Point(230, 119);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 184);
+            this.pictureBox1.Size = new System.Drawing.Size(187, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
