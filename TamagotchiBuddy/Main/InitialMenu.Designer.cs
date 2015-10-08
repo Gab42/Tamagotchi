@@ -77,10 +77,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Main.Properties.Resources.hamsterfeed1;
-            this.pictureBox1.Location = new System.Drawing.Point(186, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(221, 91);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 293);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(201, 201);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
