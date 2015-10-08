@@ -208,32 +208,32 @@
             // 
             // foodPictureBox
             // 
-            this.foodPictureBox.Location = new System.Drawing.Point(75, 174);
+            this.foodPictureBox.Location = new System.Drawing.Point(47, 162);
             this.foodPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.foodPictureBox.Name = "foodPictureBox";
-            this.foodPictureBox.Size = new System.Drawing.Size(140, 133);
-            this.foodPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.foodPictureBox.Size = new System.Drawing.Size(152, 145);
+            this.foodPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.foodPictureBox.TabIndex = 11;
             this.foodPictureBox.TabStop = false;
             // 
             // heartPicture
             // 
-            this.heartPicture.Location = new System.Drawing.Point(471, 174);
+            this.heartPicture.Location = new System.Drawing.Point(498, 161);
             this.heartPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.heartPicture.Name = "heartPicture";
-            this.heartPicture.Size = new System.Drawing.Size(140, 133);
-            this.heartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.heartPicture.Size = new System.Drawing.Size(154, 146);
+            this.heartPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.heartPicture.TabIndex = 10;
             this.heartPicture.TabStop = false;
             // 
             // petPicture
             // 
             this.petPicture.Image = global::Main.Properties.Resources.hamsterfeed2;
-            this.petPicture.Location = new System.Drawing.Point(247, 258);
+            this.petPicture.Location = new System.Drawing.Point(221, 207);
             this.petPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.petPicture.Name = "petPicture";
-            this.petPicture.Size = new System.Drawing.Size(187, 180);
-            this.petPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.petPicture.Size = new System.Drawing.Size(253, 244);
+            this.petPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.petPicture.TabIndex = 9;
             this.petPicture.TabStop = false;
             // 
